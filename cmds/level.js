@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
   };
 }
   let curxp = xp[message.author.id].xp;
-  let curlvl = xp[message.author.id].level;
+  let curlvl = xp[message.author.id].lvl;
   let nxtLvlXp = curlvl * 300;
   let difference = nxtLvlXp - curxp;
 
