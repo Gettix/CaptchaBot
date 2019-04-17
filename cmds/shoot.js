@@ -1,7 +1,7 @@
 const Discord = module.require("discord.js");
 
 module.exports.run = async (bot,message,args) => {
- 
+    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     let replies = ["-30 hp.", "-20 hp.", "Miss."];
 
     let result = Math.floor((Math.random() * replies.length));
