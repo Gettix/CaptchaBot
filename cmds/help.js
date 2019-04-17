@@ -8,6 +8,7 @@ module.exports.run = async (bot,message,args) => {
     .addField("Экономика", "money (c!money)  pay (c!pay (имя получателя) (количество монеток))")
     .addField("Развлечения", "8ball (c!8ball (вопрос))")
     .addField("Информация","serverinfo,userinfo,help")
+    .addField("Social", "embarassed, kiss (c!kiss (mmm#2222)), hug(c!hug (mmm#2222)), crossover")
     .addField("RolePlay", "health (c!health), attack (c!attack (primer#2222)), attack2 (c!attack2 (primer#2222)), kiss (c!kiss (primer#2222)), kill (c!kill (primer#2222))")
     .addField("Пригласить","https://discordapp.com/oauth2/authorize?client_id=551625781818818590&permissions=8&scope=bot")
     .setThumbnail(message.guild.iconURL)
