@@ -101,6 +101,23 @@ bot.on('guildMemberRemove', async member => {
       .setTimestamp()
   let channel = member.guild.channels.find(c => c.name == 'actions')
   await channels.send(embed)
-})
+}) 
+
+var timer;
+var i = 0;
+  timer = bot.setInterval(function () {
+    var gamePresence = [
+      `Спасибо за пользование мной)`,
+      `Мой создатель: Lava.js`,
+      `Используй c!help чтобы узнать комманды`,
+      `Всего каналов: ${bot.channels.size}`,
+      `Пользователей: ${bot.users.size}`,
+      `Cacao | Bot`,
+      `Рп`,
+      `Фан`
+    ];
+    bot.user.setPresence({ game: { name: gamePresence[i%gamePresence.length], type: 3 } });
+    i++;
+  },7500);
 
 bot.login(token);
