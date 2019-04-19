@@ -9,7 +9,7 @@ module.exports.run = async (bot,message,args) => {
 
     let ballembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag)
-
+    .addField("Пользователь", message.author)
     .setColor('#FF9900')
 
     .addField("Вы поймали", replies[result]);
