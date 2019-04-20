@@ -1,13 +1,16 @@
-const Discord = module.require("discord.js");
-const fs = require("fs");
-let d = require('./botconfig.json');
-module.exports.run = async (bot,message,args) => {
+const Discord = require('discord.js')
+let dev = require('./botconfig.json')
 
-    if(!message.user.username === d.dev) return message.channel.send("У Вас нет прав");
-    message.channel.send('pong!');
-    let enbed = new Discord.RichEmbed() 
-};
-
+module.exports = (client, message, args) => {
+    if(!message.author.id === client.default.owner) return;
+var  embed = new Discord.RichEmbed()
+  .setTimestamp()
+  .setTitle("**Server List**")
+  .setFooter(`Total Servers: ${client.guilds.size.toLocaleString()}`)
+  .setDescription(client.guilds.map(g => "**"+g.name+"** \n[Server ID:"+g.id+"]\n") );
+  message.delete(10)
+  message.channel.send(embed)
+}
 module.exports.help = {
-    name: "pingd"
+    name: "s"
 };
