@@ -3,8 +3,9 @@ const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     message.delete().catch();
-    message.channel.send(`${message.author} hug ${rUser} 🤗`);
-    let enbed = new Discord.RichEmbed() 
+    let embed = new Discord.RichEmbed();
+    .addField(`${message.author} hug`, `${rUser} 🤗`);
+    .setImage("https://cdn.discordapp.com/attachments/566235609882951681/569242723035512842/r9aU2xv.gif")
 };
 
 module.exports.help = {
