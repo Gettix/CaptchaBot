@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
         return Math.floor(Math.random() * Math.floor(max));
     }
     if (workedRecently.has(message.author.id)) {
-        message.channel.send("Wait 10 seconds before getting typing this again. - " + message.author.username);
+        message.channel.send("Подождите 10 секунд и попробуйте заново. - " + message.author.username);
     } else {
         workedRecently.add(message.author.id);
         setTimeout(() => {
