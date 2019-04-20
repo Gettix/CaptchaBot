@@ -18,8 +18,8 @@ module.exports.run = async (bot, message, args) => {
     }
     let diceResult = getRandomInt(5) + 1
     if (diceResult % 2 == 0) {
-        if (coins[message.author.id].coins >= amount) {
-            coins[message.author.id].coins = coins[message.author.id].coins + amount * 2
+        if (profile[message.author.id].coins >= amount) {
+            profile[message.author.id].coins = profile[message.author.id].coins + amount * 2
             console.log("added coins")
             wonEmbed = new Discord.RichEmbed()
             .setAuthor(message.author.username)
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
             return message.channel.send("You don't have enough coins!")
         }
     } else {
-        coins[message.author.id].coins = coins[message.author.id].coins - amount
+        profile[message.author.id].coins = profile[message.author.id].coins - amount
         lostEmbed = new Discord.RichEmbed()
         .setAuthor(message.author.username)
         .setColor("ff0000")
