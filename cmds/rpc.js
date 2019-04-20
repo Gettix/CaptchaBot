@@ -9,14 +9,14 @@ module.exports.run = async (bot,message,args) => {
 
     let ballembed = new Discord.RichEmbed()
     .setAuthor(message.author.tag)
-    .addField("Цель", `${rUser}`)
+
     .setColor('#FF9900')
 
-    .addField("Результат", replies[result]);
+    .addField("Бот выкинул", replies[result]);
 
     message.channel.send(ballembed);
 }
 
 module.exports.help = {
-    name: "shoot"
+    name: "rps"
 };
