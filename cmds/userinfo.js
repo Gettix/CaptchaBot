@@ -7,7 +7,9 @@ module.exports.run = async (bot,message,args) => {
     .setDescription("Информация о пользователе")
     .setColor('#10c7e2')
     .addField("Имя",a.username)
+
     .addField("Тег",a.tag)
+    .addField("💰 Ваш баланс", profile.a.coins)
     .addField("Дискриминатор",a.discriminator)
     .addField("Создание аккаунта",a.createdAt)
     .addField("ID",a.id)
@@ -17,5 +19,5 @@ module.exports.run = async (bot,message,args) => {
     bot.send(enbed);
 };
 module.exports.help = {
-    name: "userinfo"
+    name: "me"
 };
