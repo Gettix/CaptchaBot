@@ -11,9 +11,9 @@ module.exports.run = async (bot,message,args) => {
 
     .addField("Тег",a.tag)
     .addField("💰 Ваш баланс", uCoins)
-    .addField("Дискриминатор",a.discriminator)
-    .addField("Создание аккаунта",a.createdAt)
-    .addField("ID",a.id)
+    .addField("👤 Дискриминатор",a.discriminator)
+    .addField("🔑 Создание аккаунта",a.createdAt)
+    .addField("🆔",a.id)
     .addField("Вы бот?",a.bot)
     .setThumbnail(a.avatarURL)
 
