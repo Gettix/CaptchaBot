@@ -1,8 +1,8 @@
 const Discord = require('discord.js')
-let devp = require('./botconfig.json')
-
+const devp = require('./botconfig.json')
+let dev = devp.dev
 module.exports = (client, message, args) => {
-    if(!message.author.id === devp.dev) return message.channel.send("Вы не являетесь разработчиком");
+    if(!message.author.id === dev) return message.channel.send("Вы не являетесь разработчиком");
 var  embed = new Discord.RichEmbed()
   .setTimestamp()
   .setTitle("**Server List**")
