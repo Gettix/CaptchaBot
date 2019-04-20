@@ -3,7 +3,7 @@ const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     message.delete().catch();
-    let embed = new Discord.RichEmbed();
+    let embed = new Discord.RichEmbed()
     .setAuthor(`${message.author}`)
     .addField("Hug", `${rUser} 🤗`)
     .setColor("#FE0101")
