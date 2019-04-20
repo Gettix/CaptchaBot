@@ -6,6 +6,7 @@ module.exports.run = async (bot,message,args) => {
     let embed = new Discord.RichEmbed();
     .addField(`${message.author} hug`, `${rUser} 🤗`);
     .setImage("https://cdn.discordapp.com/attachments/566235609882951681/569242723035512842/r9aU2xv.gif")
+    message.channel.send(embed);
 };
 
 module.exports.help = {
