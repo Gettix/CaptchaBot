@@ -1,6 +1,6 @@
 var util = require('util');
 var youtube_node = require('youtube-node');
-var AuthDetails = require("./auth.json");
+var AuthDetails = require("./botconfig.json");
 
 
 function YoutubePlugin () {
