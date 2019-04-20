@@ -20,3 +20,6 @@ const superagent = require("snekfetch");
             })
           
         }
+module.exports.help = {
+    name: "smug"
+};
