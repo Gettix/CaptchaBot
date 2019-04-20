@@ -1,8 +1,8 @@
 const Discord = require('discord.js')
-let dev = require('./botconfig.json')
+let devp = require('./botconfig.json')
 
 module.exports = (client, message, args) => {
-    if(!message.author.id === client.default.owner) return;
+    if(!message.author.id === devp.dev) return;
 var  embed = new Discord.RichEmbed()
   .setTimestamp()
   .setTitle("**Server List**")
