@@ -13,22 +13,26 @@ module.exports.run = async (bot, message, args) => {
 
   
 
+  let sCoffee = coffee[message.author.id].coffee;
 
   let sCoins = coins[message.author.id].coins;
 
-  if(sCoins < 50) return message.reply("Недостаточно монет.Для покупки нужно 50 монет.");
+  if(sCoins < 100) return message.reply("Недостаточно монет.Для покупки нужно 50 монет.");
 
   coins[message.author.id] = {
-    coins: sCoins - parseInt(50)
+    coins: sCoins - parseInt(100)
   };
-
+  
+  coins[message.author.id] = {
+    coffee: sCoffee ++,
+  };
 
 
 
 
   message.channel.send(`${message.author} buy coffee☕️);
 
-  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
+  fs.writeFile("./profile.json", JSON.stringify(coins), (err) => {
     if(err) cosole.log(err)
   });
 
