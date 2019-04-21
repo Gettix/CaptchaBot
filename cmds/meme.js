@@ -1,5 +1,4 @@
-const { Command } = require('discord.js-commando');
-const { oneLine } = require('common-tags');
+const { Command } = require('discord.js');
 
 module.exports = class MemeCommand extends Command {
   constructor(client) {
