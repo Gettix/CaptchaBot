@@ -69,7 +69,7 @@ module.exports.run = async (bot,message,args) => {
     let ballembed = new Discord.RichEmbed()
     .setDescription("memes")
     .setColor('#FF9900')
-    .addField('Random meme')
+    .addField('Random meme', '\/ \/ \/')
     .setImage(replies[result]);
 
     message.channel.send(ballembed);
