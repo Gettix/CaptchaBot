@@ -62,8 +62,12 @@ module.exports.run = async (bot,message,args) => {
       'https://s-media-cache-ak0.pinimg.com/736x/ff/56/59/ff56598016c0529acf61c70f80530456.jpg',
       'http://i0.kym-cdn.com/photos/images/original/001/256/969/543.jpg',
       'https://carlchenet.com/wp-content/uploads/2016/01/githubdown.png'];
+    let mEmbed = new Discord.RichEmbed()
+    .setDescription('meme')
+    .setImage(toMeme)
+    
     toMeme = toMeme[Math.floor(Math.random() * toMeme.length)];
-    message.channel.send(toMeme);
+    message.channel.send(mEmbed);
 }
 
 module.exports.help = {
