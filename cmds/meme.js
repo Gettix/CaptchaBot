@@ -64,7 +64,7 @@ module.exports.run = async (bot,message,args) => {
       'https://carlchenet.com/wp-content/uploads/2016/01/githubdown.png'];
     toMeme = toMeme[Math.floor(Math.random() * toMeme.length)];
     message.channel.send(toMeme);
-  };
+}
 
 module.exports.help = {
   name: "meme"
