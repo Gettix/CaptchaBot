@@ -27,4 +27,4 @@ class OSU extends Social {
 
 module.exports.help = {
   name: "osu"
-  }
+  };
