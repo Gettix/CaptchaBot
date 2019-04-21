@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports.run = async (bot,message,args) => {
     let toMeme = ['https://i.redd.it/0ilh488xbudz.png',
