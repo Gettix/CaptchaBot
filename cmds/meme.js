@@ -1,7 +1,6 @@
 const Discord = module.require("discord.js");
 
 module.exports.run = async (bot,message,args) => {
-    if(!args[2]) return message.reply("Пожалуйста задайте полный вопрос!");
     let replies = ['https://i.redd.it/0ilh488xbudz.png',
       'https://cdn.discordapp.com/attachments/310611569794875404/353539349742092289/image.jpg',
       'http://weknowmemes.com/wp-content/uploads/2012/02/the-internet-is-a-series-of-tubes-and-theyre-full-of-cats.jpg',
