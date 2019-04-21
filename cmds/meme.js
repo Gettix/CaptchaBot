@@ -1,4 +1,4 @@
-const { Command } = require('discord.js');
+const Discord = require('discord.js');
 
 module.exports.run = async (bot,message,args) => {
     let toMeme = ['https://i.redd.it/0ilh488xbudz.png',
@@ -64,6 +64,7 @@ module.exports.run = async (bot,message,args) => {
       'https://carlchenet.com/wp-content/uploads/2016/01/githubdown.png'];
     let mEmbed = new Discord.RichEmbed()
     .setDescription('meme')
+    .setColor('#F0E68C')
     .setImage(toMeme)
     
     toMeme = toMeme[Math.floor(Math.random() * toMeme.length)];
