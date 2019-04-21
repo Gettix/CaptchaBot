@@ -64,7 +64,6 @@ let toMeme = ['https://i.redd.it/0ilh488xbudz.png',
     toMeme = toMeme[Math.floor(Math.random() * toMeme.length)];
     message.channel.send(toMeme);
   }
-};
 
 module.exports.help = {
   name: "meme"
