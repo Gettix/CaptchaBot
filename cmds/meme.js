@@ -1,23 +1,6 @@
 const { Command } = require('discord.js');
 
-module.exports = class MemeCommand extends Command {
-  constructor(client) {
-    super(client, {
-      name: 'meme',
-      aliases: [],
-      group: 'fun',
-      memberName: 'meme',
-      description: 'Displays a random meme.',
-      details: oneLine`
-				Are you bored and too lazy to google memes?
-        We are too! Enjoy the memes!
-			`,
-      examples: ['meme']
-    });
-  }
-
-  run(message) {
-    let toMeme = ['https://i.redd.it/0ilh488xbudz.png',
+let toMeme = ['https://i.redd.it/0ilh488xbudz.png',
       'https://cdn.discordapp.com/attachments/310611569794875404/353539349742092289/image.jpg',
       'http://weknowmemes.com/wp-content/uploads/2012/02/the-internet-is-a-series-of-tubes-and-theyre-full-of-cats.jpg',
       'http://assets8.popbuzz.com/2017/09/shooting-stars-meme-1488215847-list-handheld-0.png',
