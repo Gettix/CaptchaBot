@@ -1,5 +1,7 @@
 {
     "token":"BOT_TOKEN",
-    "prefix":"c!",
+    "prefix": {
+        "c!",
+    }
     "dev":"443325221965922315"
 }
