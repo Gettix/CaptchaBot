@@ -1,9 +1,5 @@
 {
     "token":"BOT_TOKEN",
-    "prefix": {
-        "default": "c!",
-        "server1 id here": "m!",
-        "server2 id here": "cc"
-    },
+    "prefix":"c!",
     "dev":"443325221965922315"
 }
