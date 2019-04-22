@@ -120,4 +120,24 @@ var i = 0;
     i++;
   },7500);
 
+case "prefix":
+          if(message.member.hasPermission("ADMINISTRATOR")) {
+            if(!args[0]){
+              return message.channel.send(":x: " + "| Please Enter a prefix ¯\_(ツ)_/¯")
+            }
+
+            var prefix_val = args[0];
+            file.prefix[message.guild.id] = prefix_val;
+
+            fs.writeFile(botconfig, JSON.stringify(file, null, 2), function (err) {
+
+              message.channel.send(":white_check_mark: " + "| The NEW Prefix for this bot is: " + prefix_val);
+            });
+
+          } else {
+            return message.reply(":x: " + "| You need to have the \"ADMINISTRATOR\" Permission").then(() => {
+            });
+          }
+      break;
+
 bot.login(token);
