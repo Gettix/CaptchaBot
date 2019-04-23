@@ -9,6 +9,7 @@ module.exports.run = async (bot,message,args) => {
     let enbed = new Discord.RichEmbed()
     .addField(message.author.username, `kiss ${rUser} 😚`)
     .setImage(kissI)
+    .setColor('#F8F8FF')
     message.channel.send(enbed)
 };
 
