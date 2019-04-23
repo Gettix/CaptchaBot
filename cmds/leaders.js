@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const mongoose = require('mongoose');
+
 
 const profile = require("../profile");
 let Coins = profile.coins;
