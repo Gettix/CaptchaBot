@@ -17,17 +17,11 @@ module.exports.run = async (bot, message, args) => {
   let pCoins = coins[pUser.id].coins;
   let sCoins = coins[message.author.id].coins;
 
-  if(sCoins < args[0]) return message.reply("Недостаточно валюты.");
-
-  coins[message.author.id] = {
-    coins: sCoins - parseInt(args[1])
-  };
-
   coins[pUser.id] = {
     coins: pCoins + parseInt(args[1])
   };
 
-  message.channel.send(`${message.author} has given ${pUser} ${args[1]} coffee.`);
+  message.channel.send(`${pUser} + ${args[1]} coffee.`);
 
   fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
     if(err) cosole.log(err)
@@ -37,5 +31,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "pay"
+  name: "add"
 }
