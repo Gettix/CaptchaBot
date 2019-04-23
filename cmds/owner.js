@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
    .setFooter("CacaoBot by Lava.js", "https://cdn.discordapp.com/avatars/442410451121209365/4272634f3ab276ff263ff16ca3aa560a.png?size=2048")
 
     message.channel.send(contact);
-
+};
 
       module.exports.help = {
         name: "answer",
