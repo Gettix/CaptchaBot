@@ -1,10 +1,14 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 let coins = require("../profile.json");
+const devel = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
-  //!pay @isatisfied 59345
 
+  let Owner = message.author;
+  if(Owner.id !== devel.dev) return message.reply("Only the bot owner can use this command!")
+   
+  
   let ccoins = args.join(" ").slice(22);
   let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 
