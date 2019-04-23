@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Msg By", `${message.author} with ID: ${message.author.id}`)
     .addField("Channel", message.channel)
     .addField("Time", message.createdAt)
-    .addField("Msg", rreason);
+    .addField("Msg", rreason)
 
     let reportschannel = message.guild.channels.find(`name`, rmsg);
     if(!reportschannel) return message.channel.send("Не удалось найти канал сообщений.");
