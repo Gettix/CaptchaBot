@@ -19,23 +19,13 @@ module.exports.run = async (bot, message, args) => {
    .setThumbnail(Owner.displayAvatarURL)
    .setTitle("Response  from your contact!")
    .addField("Response:", sayMessage)
-   .addField("Support Server", "[Odar Army](https://discord.gg/zvvasbc)")
-   .addField("Bot Server", "[ShopBot](https://discord.gg/AhgGbR8)")
+   .addField("Cool", "@everyone")
    .setTimestamp()
-   .setFooter("CoffeeBot by Lava.js", "https://cdn.discordapp.com/avatars/442410451121209365/4272634f3ab276ff263ff16ca3aa560a.png?size=2048")
+   .setFooter("CacaoBot by Lava.js", "https://cdn.discordapp.com/avatars/442410451121209365/4272634f3ab276ff263ff16ca3aa560a.png?size=2048")
 
     message.channel.send(contact);
 
-    let chanemb = new Discord.RichEmbed()
-    .setColor("#00ff00")
-    .setDescription(`Message sent to <@${id}>`);
 
-    message.channel.send(chanemb).then(msg => {msg.delete(5000)});
-
-
-        message.delete();
-
-      }
       module.exports.help = {
         name: "answer",
         description: 'Owner Only',
