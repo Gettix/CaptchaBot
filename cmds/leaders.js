@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const mongoose = require('mongoose');
 
-const Coins = require("../profile");
+const profile = require("../profile");
+let Coins = profile.coins;
 module.exports.run = async (bot, message, args) => {
   await message.delete();
   if (message.author.id !== '178657593030475776') return;
