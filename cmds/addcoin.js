@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
   let sCoins = coins[message.author.id].coins;
 
   coins[pUser.id] = {
-    coins: pCoins + parseInt(args[1])
+    coins: + args[1]
   };
 
   message.channel.send(`${pUser} + ${args[1]} coffee.`);
