@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const db = require('quick.db')
+const db = require('../profile.json')
 
 module.exports.run = async (bot, message, args) => {
 
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
     let user = message.mentions.users.first() || message.author
     message.channel.send('Successfully added ' + args[0] + ' to ' + user)
-    db.add(`money_${message.guild.id}_${message.author.id}`, args[0])
+    db.add(`coins_${message.guild.id}_${message.author.id}`, args[0])
 
 }
 
