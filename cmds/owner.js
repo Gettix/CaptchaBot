@@ -22,9 +22,9 @@ module.exports.run = async (bot, message, args) => {
    .addField("Support Server", "[Odar Army](https://discord.gg/zvvasbc)")
    .addField("Bot Server", "[ShopBot](https://discord.gg/AhgGbR8)")
    .setTimestamp()
-   .setFooter("ShopBot by Odar", "https://cdn.discordapp.com/avatars/442410451121209365/4272634f3ab276ff263ff16ca3aa560a.png?size=2048")
+   .setFooter("CoffeeBot by Lava.js", "https://cdn.discordapp.com/avatars/442410451121209365/4272634f3ab276ff263ff16ca3aa560a.png?size=2048")
 
-    bot.users.get(id).send(contact);
+    message.channel.send(contact);
 
     let chanemb = new Discord.RichEmbed()
     .setColor("#00ff00")
