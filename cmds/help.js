@@ -5,7 +5,7 @@ module.exports.run = async (bot,message,args) => {
     .setDescription("Помощь")
     .setColor('#4B0082')
     .addField("Модерация","kick(c!kick (пинг пользователя)) clear(c!clear (количество сообщений))  warn(c!warn (пинг пользователя))   unwarn(c!unwarn (пинг пользователя))  ban(c!ban (пинг пользователя))  say(c!say (ваше сообщение))  tempmute(c!tempmute (пинг пользователя) (сек./мин./час./дни))  report(c!report (пинг пользователя) (Причина или описание))")
-    .addField("Экономика", "coffee (c!coffee)  pay (c!pay (имя получателя) (количество валюты))")
+    .addField("Экономика", "coffee (c!coffee)  pay (c!pay (имя получателя) (количество валюты)) daily(c!daily)")
     .addField("Развлечения", "8ball(c!8ball (вопрос))  meme(c!meme)  rps(c!rps (r/p/s)  slots(c!slots)")
     .addField("Информация","serverinfo,userinfo,help")
     .addField("Social", "embarassed, kiss (c!kiss (mmm#2222)), hug(c!hug (mmm#2222)), crossover")
