@@ -12,12 +12,7 @@ module.exports.run = async (bot, message, args) => {
   let ccoins = args.join(" ").slice(22);
   let pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 
-  if(!coins[pUser.id]){
-    coins[pUser.id] = {
-      coins: 0
-    };
-  }
-
+  
   let pCoins = coins[pUser.id].coins;
   let sCoins = coins[message.author.id].coins;
 
