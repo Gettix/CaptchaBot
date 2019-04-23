@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     
     let rreason = args.join(" ").slice(22);
-    let rmsg = args.shift();
+    let rmsg = args.join(" ").slice(1);
 
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Mail.sru")
