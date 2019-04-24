@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
+    let back = ["https://cdn.discordapp.com/attachments/566235609882951681/570516908302925834/maxresdefault.jpg", "https://cdn.discordapp.com/attachments/566235609882951681/570516905874685962/gifki-dlya-strima026-min.gif", "https://cdn.discordapp.com/attachments/566235609882951681/570516907527110656/-.jpg"];
     let enbed = new Discord.RichEmbed()
     .setDescription("Магазин")
     .setColor('#4B0082')
