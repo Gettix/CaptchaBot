@@ -7,7 +7,10 @@ module.exports.run = async (bot,message,args) => {
   bot.send = function (msg){
     message.channel.send(msg);
   }
-  if(!
+  let sCoins = coins[message.author.id].coins;
+
+  if(sCoins = 0) return message.reply("У вас нет кофе.");
+
   
   let u = profile[uid];
   u.coins --;
