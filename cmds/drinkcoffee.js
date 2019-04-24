@@ -12,7 +12,7 @@ module.exports.run = async (bot,message,args) => {
   if(sCoins = 0) return message.reply("У вас нет кофе.");
 
   
-  let u = profile[uid];
+  let u = coins[uid];
   u.coins --;
 message.channel.send(`${un} Выпил кофе (-1)`)
 };
