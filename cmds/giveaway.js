@@ -19,7 +19,8 @@ time = Number(messageArray[2]);
 
 
 var giveEmbed = new Discord.RichEmbed();
-giveEmbed.setDescription(item);
+giveEmbed.setDescription(item)
+giveEmbed.addField("Количество мест", winnerCount)
 var embedSent = await message.channel.send(giveEmbed);
 embedSent.react("🎉");
 setTimeout(function() {
