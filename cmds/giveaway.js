@@ -21,7 +21,7 @@ time = Number(messageArray[2]);
 var giveEmbed = new Discord.RichEmbed();
 .setDescription(item);
 var embedSent = await message.channel.send(giveEmbed);
-message.react("🎉");
+embedSent.react("🎉");
 .setTimeout(function() {
 
 
