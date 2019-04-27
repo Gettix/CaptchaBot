@@ -27,7 +27,7 @@ setTimeout(function() {
 
   var peopleReacted = embedSent.reactions.get("🎉").users;
   var index = Math.floor(Math.random() * peopleReacted.length);
-  var winners = [];
+  var winners = [index];
   var winnerMsg = "";
   for (var i = 0; i < winners.length; i++){
     winnerMsg += (winners[i].toString() + " ");
