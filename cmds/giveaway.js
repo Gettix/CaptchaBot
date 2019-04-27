@@ -22,7 +22,7 @@ var giveEmbed = new Discord.RichEmbed();
 giveEmbed.setDescription(item);
 var embedSent = await message.channel.send(giveEmbed);
 embedSent.react("🎉");
-.setTimeout(function() {
+setTimeout(function() {
 
 
   var peopleReacted = embedSent.reactions.get("🎉").users;
