@@ -6,8 +6,8 @@ module.exports.run = async (bot, message, args) => {
 	.addField("Голосование", argss)
 	
 	bot.send(poolembed);
-	poolembed.react(":white_check_mark:");
-	poolembed.react(":negative_squared_cross_mark:");
+	poolembed.react("✔️");
+	poolembed.react("❌");
 }
 
 module.exports.help = {
