@@ -25,20 +25,19 @@ module.exports.run = async (bot,message,args) => {
 }
 else
 {
-  if ( message.member.roles.filter( x => x.name[ 0 ] === '­' ).map( x => x.name ).length >= 1 ) return message.channel.send( "Вы уже имеете личную роль, чтоб сделать новую, удалите старую через `m.setcolor delete`" );
+  if ( message.member.roles.filter( x => x.name[ 0 ] === '­' ).map( x => x.name ).length >= 1 ) return message.channel.send( "Вы уже имеете личную роль, чтоб сделать новую, удалите старую через `k!role delete`" );
   let color = args.pop();
   let name = args.join( " " );
   if ( !name || !color ) return message.channel.send( "Укажите название и цвет роли `m.role name of role #color`" )
   if ( color[ 0 ] !== '#' ) return message.channel.send( "Цвет роли должен начинаться на `#`" );
   try
   {
- message.guild.createRole(
+    message.guild.createRole(
     {
       name: '­' + name,
       color: color,
       hoist: false,
       permissions: 0,
-      position: message.member.highestRole.position + 3,
       mentionable: false
     } ).then( role =>
     {
@@ -46,7 +45,7 @@ else
       {
         code: 'js'
       } ) )
-      message.channel.send( "Роль была успешно создана." )
+      message.channel.send( "Роль создана." )
     } )
   }
   catch ( err )
