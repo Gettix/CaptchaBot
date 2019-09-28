@@ -11,7 +11,8 @@ module.exports.run = async (bot,message,args) => {
     
     u.vip++;
     
-    let 
+    message.channel.send('Успешно! Теперь этот пользователь имеет вип-доступ');
+    };
     
 
 module.exports.help = {
