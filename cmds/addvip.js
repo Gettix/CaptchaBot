@@ -1,6 +1,6 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
-let profile = require('./profile.json');
+const profile = require('./profile.json');
 
 module.exports.run = async (bot,message,args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
