@@ -12,6 +12,7 @@ module.exports.run = async (bot,message,args) => {
     u.vip++;
     fs.writeFile('./profile.json',JSON.stringify(profile),(err) =>{
         if(err) console.log(err);
+    });
     
     message.channel.send('Успешно! Теперь этот пользователь имеет вип-доступ');
 };
