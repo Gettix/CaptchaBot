@@ -48,6 +48,7 @@ bot.on('message', async message => {
     };
   };
   let u = profile[uid];
+  u.vip++;
   u.coins ++;
   u.xp++;
   if(u.xp>= (u.lvl * 5)){
