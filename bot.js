@@ -68,7 +68,7 @@ bot.on('message', async message => {
   if(cmd) cmd.run(bot,message,args);
 });
 
-bot.on('messageUpdate', async (oldmsg, newmsg) => {
+/*bot.on('messageUpdate', async (oldmsg, newmsg) => {
   let embed = new Discord.RichEmbed()
     .setAuthor('Сообщение изменено', newmsg.guild.iconURL)
     .addField('Отправитель', oldmsg.member, true)
@@ -78,7 +78,7 @@ bot.on('messageUpdate', async (oldmsg, newmsg) => {
     .setColor('#FF8000')
     .setTimestamp()
   await oldmsg.channel.send(embed);
-})
+})*/
 
 bot.on('guildMemberAdd', async member => {
   let role = member.guild.roles.find(r => r.name == "Community")
