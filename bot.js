@@ -44,7 +44,7 @@ bot.on('message', async message => {
       warns:0,
       xp:0,
       lvl:0,
-
+      vip:0,
     };
   };
   let u = profile[uid];
