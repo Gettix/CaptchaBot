@@ -14,6 +14,7 @@ module.exports.run = async (bot,message,args) => {
     .addField("👤 Дискриминатор",a.discriminator)
     .addField("🔑 Создание аккаунта",a.createdAt)
     .addField("🆔",a.id)
+    .addField("VIP?", profile[message.author.id].vip)
     .addField("Вы бот?",a.bot)
     .setThumbnail(a.avatarURL)
 
