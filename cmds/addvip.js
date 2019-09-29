@@ -12,7 +12,7 @@ module.exports.run = async (bot,message,args) => {
     
     profile[rUser.id].vip = true;
   
-    });
+    };
     
     message.channel.send('Успешно! Теперь этот пользователь имеет вип-доступ');
 };
