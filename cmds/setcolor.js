@@ -1,7 +1,12 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
+let p = require("../profile.json");
 
 module.exports.run = async (bot,message,args) => {
+    let au = message.author.id
+    let Owner = p[au]
+    if(Owner.vip !== true) return message.reply("Только вип-пользователи могут использовать эту команду!")
+    
     if ( args.length === 1 && args[ 0 ] === 'delete' )
 {
   let roles = message.member.roles.filter( x => x.name[ 0 ] === '­' ).map( x => x.name );
