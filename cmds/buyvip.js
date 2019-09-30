@@ -5,7 +5,6 @@ let profile = require("../profile.json");
 
 module.exports.run = async (bot,message,args) => {
     let Owner = message.author;
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     let uid = Owner.id;
     let u = profile[uid];
     if(u.coins < 3000) return message.reply("Не хватает средств!")
