@@ -45,6 +45,7 @@ bot.on('message', async message => {
       xp:0,
       lvl:0,
       vip:false,
+      status: "none set",
     };
   };
   let u = profile[uid];
