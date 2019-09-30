@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const fs = require("fs");
-const profile = require('../profile.json');
+const p = require('../profile.json');
 
 module.exports.run = async (bot,message,args) => {
    let au = message.author.id
@@ -8,7 +8,7 @@ module.exports.run = async (bot,message,args) => {
     if(Owner.vip !== true) return message.reply("Только вип-пользователи могут использовать эту команду!")
   let stats = args.join(" ");
   
-  profile[au].status = stats;
+  p[au].status = stats;
   
   bot.send("Ваш статус изменен.")
   
