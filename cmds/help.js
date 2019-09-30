@@ -2,20 +2,71 @@ const Discord = module.require("discord.js");
 const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
     let enbed = new Discord.RichEmbed()
-    .setDescription("Помощь")
-    .setColor('#4B0082')
-    .addField("Модерация","kick(c!kick (пинг пользователя)) clear(c!clear (количество сообщений))  warn(c!warn (пинг пользователя))   unwarn(c!unwarn (пинг пользователя))  ban(c!ban (пинг пользователя))  say(c!say (ваше сообщение))  tempmute(c!tempmute (пинг пользователя) (сек./мин./час./дни))  report(c!report (пинг пользователя) (Причина или описание))")
-    .addField("Экономика", "coffee (c!coffee)  pay (c!pay (имя получателя) (количество валюты)) daily(c!daily)")
-    .addField("Развлечения", "8ball(c!8ball (вопрос))  meme(c!meme)  rps(c!rps (r/p/s)  slots(c!slots)")
-    .addField("Информация","serverinfo,userinfo,help")
-    .addField("Social", "embarassed, kiss (c!kiss (mmm#2222)), hug(c!hug (mmm#2222)), crossover")
-    .addField("RolePlay", "health (c!health), attack (c!attack (primer#2222)), attack2 (c!attack2 (primer#2222)), kiss (c!kiss (primer#2222)), kill (c!kill (primer#2222))")
-    .addField("Пригласить","https://discordapp.com/oauth2/authorize?client_id=551625781818818590&permissions=8&scope=bot")
-    .setThumbnail(message.guild.iconURL)
-    .setImage('https://cdn.discordapp.com/attachments/566235609882951681/566235760311926784/rylgIUmPW.gif')
-
+    .setDescription("Модерация")
+    .setColor('#00f815')
+    .addField("***Kick***", "*.kick <user>*")
+    .addField("***ban***", "*.ban <user>*")
+    .addField("***say***", "*.say <message>*")
+	.addField("***warn***", "*.warn <user>*")
+	.addField("***unwarn***", "*.unwarn <user>*")
+	.addField("***report***", "*.report <user> <reason>*");
+    
     bot.send(enbed);
+    
+    let enbed1 = new Discord.RichEmbed()
+    .setDescription("Экономия")
+    .addField("***Coffee***", "*.coffee*")
+    .addField("***pay***", "*.pay <user> <quantity>*")
+    .addField("***daily***", "*.daily*");
+    
+    bot.send(enbed1);
+    
+    let enbed2 = new Discord.RichEmbed()
+    .setDescription("Развлечения")
+    .addField("***8ball***", "*.8ball a <question>*")
+    .addField("***meme***", "*.meme*")
+    .addField("***rps***", "*.rps <object>*")
+    .addField("***slots***", "*.slots*")
+    .addField("***gaym***", "*.gaym*")
+    .addField("***hunt***", "*.hunt*")
+    .addField("***Caaaats :cat:***", "*.cat*")
+    .addField("***Doggy ^^ :dog:***", "*.dog*");
+    
+    bot.send(enbed2);
+    
+    let enbed3 = new Discord.RichEmbed()
+    .setDescription("Информация")
+    .addField("***me***", "*.me*")
+    .addField("***serverinfo***", "*.serverinfo*")
+    .addField("***botinfo***", "*.botinfo*")
+    .addField("***authors***", "*.authors*")
+    .addField("***help***", "*.help*")
+    .addField("***avatar***", "*.avatar*");
+    
+    bot.send(enbed3);
+    
+    let enbed4 = new Discord.RichEmbed()
+    .setDescription("Социальное")
+    .addField("***kiss***", ".kiss <user>")
+    .addField("***embarassed***", ".embarassed")
+    .addField("***hug***", "*.hug <user>*")
+    .addField("***crossover***", "*.crossover*")
+    .addField("***level***", "*.lvl*");
+    
+    bot.send(enbed4);
+    
+    let enbed5 = new Discord.RichEmbed()
+    .setDescription("Role Play")
+    .addField("***kill***", "*.kill <user>*")
+    .addField("***health***", "*.health*")
+    .addField("***attack***", "*.attack <user>*")
+    .addField("***attack2***", "*.attack2 <user>*")
+    .addField("***Shoot***", "*.shoot <user>*")
+    .addField("***Invite***", "https://discordapp.com/oauth2/authorize?client_id=551625781818818590&permissions=8&scope=bot");
+
+	bot.send(enbed5);
 };
+
 module.exports.help = {
     name: "help"
 };
