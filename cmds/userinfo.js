@@ -10,6 +10,7 @@ module.exports.run = async (bot,message,args) => {
     .addField("Имя",a.username)
 
     .addField("Тег",a.tag)
+    .addField("Статус", profile[message.author.id].status)
     .addField(":coffee: Ваш баланс", uCoins)
     .addField("👤 Дискриминатор",a.discriminator)
     .addField("🔑 Создание аккаунта",a.createdAt)
