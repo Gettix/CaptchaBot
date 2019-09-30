@@ -8,8 +8,8 @@ module.exports.run = async (bot, message, args) => {
 	bot.send(poolembed);
 	
 	var embedSent = await message.channel.send(poolembed);
-	poolembed.react("✔️");
-	poolembed.react("❎");
+	embedSent.react("✔️");
+	embedSent.react("❎");
 }
 
 module.exports.help = {
