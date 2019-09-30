@@ -15,14 +15,17 @@ module.exports.run = async (bot,message,args) => {
     
     let enbed1 = new Discord.RichEmbed()
     .setDescription("Экономия")
+    .setColor('#00f815')
     .addField("***Coffee***", "*.coffee*")
     .addField("***pay***", "*.pay <user> <quantity>*")
-    .addField("***daily***", "*.daily*");
+    .addField("***daily***", "*.daily*")
+    .addField("***shop***", "*.shop*");
     
     bot.send(enbed1);
     
     let enbed2 = new Discord.RichEmbed()
     .setDescription("Развлечения")
+    .setColor('#00f815')
     .addField("***8ball***", "*.8ball a <question>*")
     .addField("***meme***", "*.meme*")
     .addField("***rps***", "*.rps <object>*")
@@ -36,6 +39,7 @@ module.exports.run = async (bot,message,args) => {
     
     let enbed3 = new Discord.RichEmbed()
     .setDescription("Информация")
+    .setColor('#00f815')
     .addField("***me***", "*.me*")
     .addField("***serverinfo***", "*.serverinfo*")
     .addField("***botinfo***", "*.botinfo*")
@@ -47,6 +51,7 @@ module.exports.run = async (bot,message,args) => {
     
     let enbed4 = new Discord.RichEmbed()
     .setDescription("Социальное")
+    .setColor('#00f815')
     .addField("***kiss***", ".kiss <user>")
     .addField("***embarassed***", ".embarassed")
     .addField("***hug***", "*.hug <user>*")
@@ -57,6 +62,7 @@ module.exports.run = async (bot,message,args) => {
     
     let enbed5 = new Discord.RichEmbed()
     .setDescription("Role Play")
+    .setColor('#00f815')
     .addField("***kill***", "*.kill <user>*")
     .addField("***health***", "*.health*")
     .addField("***attack***", "*.attack <user>*")
