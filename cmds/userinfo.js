@@ -31,6 +31,7 @@ module.exports.run = async (bot,message,args) => {
     .addField("🆔",a.id)
     .addField("Нарушения", profile[message.author.id].warns)
     .addField("Вы бот?",a.bot)
+    .addField("👇👇КЛИК👇👇", "https://discord.gg/SZYUZEY")
     .setThumbnail(a.avatarURL)
 
     bot.send(enbed);
