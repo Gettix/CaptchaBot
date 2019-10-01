@@ -5,7 +5,7 @@ module.exports.run = async (bot,message,args) => {
     let uid = message.author.id;
     let a = message.author;
     let uCoins = profile[message.author.id].coins;
-    if(profile[uid].vip = true) {
+    if(profile[uid].vip == true) {
     let enbed = new Discord.RichEmbed()
     .setTitle(`💙💙**ВИП ПРОФИЛЬ**💙💙 || *All Commands Unlocked 🔓*`)
     .setColor('#F0A300')
