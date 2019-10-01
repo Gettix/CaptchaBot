@@ -8,13 +8,12 @@ module.exports.run = async (bot,message,args) => {
     let uid = Owner.id;
     let u = profile[uid];
     if(u.coins < 3000) return message.reply("Не хватает средств!")
+
     
-  profile[message.author.id] = {
-    profile: u.coins - parseInt(3000)
-  };
-  profile[message.author.id] = {
-    profile: u.vip = true
-  };
+    u.coins - parseInt(3000);
+
+    u.vip = true;
+
     
     
   
