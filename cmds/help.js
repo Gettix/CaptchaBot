@@ -67,6 +67,16 @@ module.exports.run = async (bot,message,args) => {
     .addField("***Invite***", "https://discordapp.com/oauth2/authorize?client_id=551625781818818590&permissions=8&scope=bot");
 
 	bot.send(enbed5);
+
+     let enbed5 = new Discord.RichEmbed()
+    .setDescription("VIP")
+    .setColor('#00f815')
+    .addField("***Status***", "*.status <text>*")
+    .addField("***SetColor***", "*.setcolor <RoleName> <#color>*")
+    .setFooter("More Later...")
+
+	bot.send(enbed5);
+	
 };
 
 module.exports.help = {
