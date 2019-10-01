@@ -15,6 +15,7 @@ module.exports.run = async (bot,message,args) => {
     if(wordd !== g.word) return bot.send(`${message.author}, Вы не угадали слово, попробуйте еще раз`);
     if(wordd == g.word) {
     g.starts = false;
+    g.word = "none";
     bot.send(`${message.author} отгадал слово! Игра окончена:3`);
    };
   };
