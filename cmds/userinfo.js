@@ -13,8 +13,6 @@ module.exports.run = async (bot,message,args) => {
     .addField(`Тег`,a.tag,true)
     .addField(`Статус`, profile[message.author.id].status,true)
     .addField(`:coffee: Ваш баланс`, uCoins,true)
-    .addField(`👤 Дискриминатор`,a.discriminator,true)
-    .addField(`🔑 Создание аккаунта`,a.createdAt,true)
     .addField(`🆔`,a.id,true)
     .addField("Нарушения", profile[message.author.id].warns,true)
     .addField(`Вы бот?`,a.bot,true)
