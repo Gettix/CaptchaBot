@@ -9,8 +9,9 @@ module.exports.run = async (bot,message,args) => {
     let u = profile[uid];
     if(u.coins < 3000) return message.reply("Не хватает средств!")
     
+    u.coins -- 3000;
     u.vip = true;
-    u.coins --3000;
+    
   
 
     
