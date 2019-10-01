@@ -18,6 +18,7 @@ module.exports.run = async (bot,message,args) => {
     g.starts = false;
     bot.send(`${message.author} отгадал слово! Игра окончена:3`);
    };
+  };
 };
 
 module.exports.help = {
