@@ -6,7 +6,7 @@ module.exports.run = async (bot,message,args) => {
     let enbed = new Discord.RichEmbed()
     .setDescription("Магазин")
     .setColor('#4B0082')
-    .addField("💰 Валюта","1000:coffee: - 10 rub. 🔴 1500:coffee: - 20 rub 🔴 2300:coffee: - 30(🎁sale -9%)   **🔴 VIP: 10rub**")
+    .addField("💰 Валюта","1000:coffee: - 10 rub. 🔴 1500:coffee: - 20 rub 🔴 2300:coffee: - 30(🎁sale -9%)   **🔴 VIP: 10rub or 3000co (.buyvip)**")
     .addField("🎍 Способы оплаты", "🔸Qiwi - *8 913 001-59-97* (Указать что вы покупаете, а также ваш дискриминатор(Например: #9999) и айди в Discord. **Обязательно вступить в официальную группу бота: https://discord.gg/FurrkCH (Иначе донат не прийдет)**")
     .setFooter("CacaoBot 2019 | Все права защищены")
     .setThumbnail(message.guild.iconURL)
