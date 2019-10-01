@@ -9,7 +9,6 @@ module.exports.run = async (bot,message,args) => {
     g.starts == true;
     bot.send("Игра началась!! Кто первый введет слово тот и будет ведущим! (.word set <word>)");
     };
-  bot.send("Игра началась!! Кто первый введет слово тот и будет ведущим! (.word set <word>)");
   
 };
 
