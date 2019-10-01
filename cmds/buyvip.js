@@ -10,7 +10,7 @@ module.exports.run = async (bot,message,args) => {
     if(u.coins < 3000) return message.reply("Не хватает средств!")
     
     u.vip = true;
-    u.coins -- 3000;
+    u.coins - 3000;
   
 
     
