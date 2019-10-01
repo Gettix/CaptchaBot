@@ -17,7 +17,7 @@ module.exports.run = async (bot,message,args) => {
     .addField("Нарушения", profile[message.author.id].warns,true)
     .addField(`Вы бот?`,a.bot,true)
     .setThumbnail(a.avatarURL)
-    .setFooter("👑 | K I N G | 👑")
+    .setFooter("YOUR 👑 | K I N G | 👑 RUOY")
 
     bot.send(enbed);
     } else {
