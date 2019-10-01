@@ -30,10 +30,10 @@ module.exports.run = async (bot,message,args) => {
 }
 else
 {
-  if ( message.member.roles.filter( x => x.name[ 0 ] === '­' ).map( x => x.name ).length >= 1 ) return message.channel.send( "Вы уже имеете личную роль, чтоб сделать новую, удалите старую через `k!role delete`" );
+  if ( message.member.roles.filter( x => x.name[ 0 ] === '­' ).map( x => x.name ).length >= 1 ) return message.channel.send( "Вы уже имеете личную роль, чтоб сделать новую, удалите старую через `.setcolor delete`" );
   let color = args.pop();
   let name = args.join( " " );
-  if ( !name || !color ) return message.channel.send( "Укажите название и цвет роли `m.role name of role #color`" )
+  if ( !name || !color ) return message.channel.send( "Укажите название и цвет роли `.setcolor name #color`" )
   if ( color[ 0 ] !== '#' ) return message.channel.send( "Цвет роли должен начинаться на `#`" );
   try
   {
