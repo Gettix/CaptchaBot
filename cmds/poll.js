@@ -6,7 +6,6 @@ module.exports.run = async (bot, message, args) => {
 	.setTitle("Привет!")
 	.addField("Голосование", argss);
 	
-	bot.send(poolembed);
 	
 	var embedSent = await message.channel.send(poolembed);
 	embedSent.react('✔️');
