@@ -70,14 +70,14 @@ module.exports.run = async (bot,message,args) => {
 
 	bot.send(enbed5);
 
-     let enbed5 = new Discord.RichEmbed()
+     let enbed6 = new Discord.RichEmbed()
     .setDescription("VIP")
     .setColor('#00f815')
     .addField("***Status***", "*.status <text>*")
     .addField("***SetColor***", "*.setcolor <RoleName> <#color>*")
     .setFooter("More Later...")
 
-	bot.send(enbed5);
+	bot.send(enbed6);
 	
 };
 
