@@ -19,7 +19,8 @@ module.exports.run = async (bot,message,args) => {
     .addField("***Coffee***", "*.coffee*")
     .addField("***pay***", "*.pay <user> <quantity>*")
     .addField("***daily***", "*.daily*")
-    .addField("***shop***", "*.shop*");
+    .addField("***shop***", "*.shop*")
+    .addField("***work***", ".work");
     
     bot.send(enbed1);
     
@@ -49,6 +50,7 @@ module.exports.run = async (bot,message,args) => {
     .setDescription("Социальное")
     .setColor('#00f815')
     .addField("***kiss***", ".kiss <user>")
+    .addField("***Poll***", ".poll <text>")
     .addField("***embarassed***", ".embarassed")
     .addField("***hug***", "*.hug <user>*")
     .addField("***crossover***", "*.crossover*")
