@@ -2,7 +2,7 @@ const Discord = module.require("discord.js");
 const fs = require("fs");
 const g = require("../game.json");
 module.exports.run = async (bot,message,args) => {
-    if(g.start !== true) return bot.send("Игра не началась. Начните игру (.whstart)");
+    if(g.starts !== true) return bot.send("Игра не началась. Начните игру (.whstart)");
     let set = args.join(" ");
     let wordd = arps.pop("");
     
