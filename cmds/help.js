@@ -32,7 +32,6 @@ module.exports.run = async (bot,message,args) => {
     .addField("***slots***", "*.slots*")
     .addField("***gaym***", "*.gaym*")
     .addField("***hunt***", "*.hunt*")
-    .addField("***Caaaats :cat:***", "*.cat*")
     .addField("***Doggy ^^ :dog:***", "*.dog*");
     
     bot.send(enbed2);
@@ -40,12 +39,9 @@ module.exports.run = async (bot,message,args) => {
     let enbed3 = new Discord.RichEmbed()
     .setDescription("Информация")
     .setColor('#00f815')
-    .addField("***me***", "*.me*")
+    .addField("***Profile***", "*.me*")
     .addField("***serverinfo***", "*.serverinfo*")
-    .addField("***botinfo***", "*.botinfo*")
-    .addField("***authors***", "*.authors*")
     .addField("***help***", "*.help*")
-    .addField("***avatar***", "*.avatar*");
     
     bot.send(enbed3);
     
