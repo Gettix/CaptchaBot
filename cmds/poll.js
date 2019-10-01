@@ -3,6 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 	let argss = args.join(" ");
 	let poolembed = new Discord.RichEmbed()
+	.setTitle("Привет!")
 	.addField("Голосование", argss);
 	
 	bot.send(poolembed);
