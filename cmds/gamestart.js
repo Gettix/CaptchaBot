@@ -4,7 +4,7 @@ const fs = require("fs");
 const g = require('../game.json');
 
 module.exports.run = async (bot,message,args) => {
-    fs.writeFile('../game.json',JSON.stringify(game),(err) =>{
+    fs.writeFile('../game.json',JSON.stringify(g),(err) =>{
     if(err) console.log(err);
   });
     if(g.starts == true) return bot.send("Игра уже началась");
