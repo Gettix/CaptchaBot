@@ -5,6 +5,7 @@ const fs = require('fs');
 const token = process.env.BOT_TOKEN;
 let config = require('./botconfig.json');
 
+let g = require('./game.json');
 let prefix = config.prefix;
 let profile = require('./profile.json');
 
@@ -57,6 +58,9 @@ bot.on('message', async message => {
     u.lvl += 1;
   }
   fs.writeFile('./profile.json',JSON.stringify(profile),(err) =>{
+    if(err) console.log(err);
+  });
+  fs.writeFile('./game.json',JSON.stringify(g),(err) =>{
     if(err) console.log(err);
   });
   let user = message.author.username;
