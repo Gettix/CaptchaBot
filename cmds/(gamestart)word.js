@@ -4,7 +4,7 @@ const g = require("../game.json");
 module.exports.run = async (bot,message,args) => {
     if(g.starts !== true) return bot.send("Игра не началась. Начните игру (.whstart)");
     let set = args.join(" ");
-    let wordd = arps.pop();
+    let wordd = args.pop();
     
     if(set === 'set') {
     if(g.word === 'none') return bot.send("Слово уже выбранно");
