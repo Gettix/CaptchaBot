@@ -11,7 +11,9 @@ module.exports.run = async (bot,message,args) => {
     
   profile[message.author.id] = {
     profile: u.coins - parseInt(3000)
-    u.vip = true;
+  };
+  profile[message.author.id] = {
+    profile: u.vip = true
   };
     
     
