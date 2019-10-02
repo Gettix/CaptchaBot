@@ -8,6 +8,7 @@ module.exports.run = async (bot,message,args) => {
 	let uid = message.author.id;
   let gid = message.guild.id;
 	
+	
 let embed = new Discord.RichEmbed()
 .setTitle("Магазин Ролей")
 .addField("👤Роль", g[gid].buyrole, true)
@@ -30,12 +31,13 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if (reaction.emoji.name === '💳') {
 		if(p[uid].card < g[gid].cost) return bot.reply("Недостаточно тикетов для транзакции");
 			p[uid].card -= g[gid].cost;
+			let role = g[gid].buyrole;
+			let MemBer = message.author;
+			const roles = message.guild.roles.find('name', role);
+                        MemBer.addRole(roles);
+
 			
-			
-			const guildMember = message.author;
-                        guildMember.addRole(g[gid].buyrole);
-			
-		bot.send(`Вы купили роль ${g[gid].buyrole}`);
+		bot.send(`Вы купили роль`);
 		} else {
 		bot.send("Вы отклонили платеж❎");
 		}
