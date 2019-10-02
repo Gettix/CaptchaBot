@@ -31,10 +31,9 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if(p[uid].card < g[gid].cost) return bot.reply("Недостаточно тикетов для транзакции");
 			p[uid].card -= g[gid].cost;
 			
-			message.member.addRole( g[gid].buyrole ).catch( err => message.channel.send( err,
-      {
-        code: 'js'
-      } ) )
+			
+			const guildMember = message.author;
+                        guildMember.addRole(g[gid].buyrole);
 			
 		bot.send(`Вы купили роль ${g[gid].buyrole}`);
 		} else {
