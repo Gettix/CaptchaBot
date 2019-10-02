@@ -23,6 +23,7 @@ module.exports.run = async (bot,message,args) => {
     let uid = message.author.id;
     g.starts = false;
     g.word = "none";
+    g.gv = 0;
     p[uid].coins += 70;
     bot.send(`${message.author} отгадал слово и получил 70 тикетов! Игра окончена:3`);
    };
