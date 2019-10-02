@@ -1,29 +1,47 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
+const p = require("../profile.json");
+
 module.exports.run = async (bot,message,args) => {
+	let uid = message.author.id;
 	
-message.react('👍').then(() => message.react('👎'));
+let embed = new Discord.RichEmbed()
+.setTitle("ОТД БАНК")
+.addField("💶Наличные", p[uid].coins, true)
+.addField("💳На карте", p[uid].card, true)
+.setFooter("💳 - чтобы положить 100🎫 на карту | 👝 - Чтобы снять 100🎫 с карты")
+bot.send(embed);
+
+var emess = await message.channel.send(embed);
+	
+emess.react('💳').then(() => emess.react('👝'));
 
 const filter = (reaction, user) => {
 	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
 };
 
-message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
 		if (reaction.emoji.name === '👍') {
-			message.reply('you reacted with a thumbs up.');
+		if(p[uid].coins < 100) return bot.send("Недостаточно тикетов для транзакции");
+			p[uid].coins -= 100;
+			p[uid].card += 100;
+		bot.send("На карту закинуто 100🎫");
 		} else {
-			message.reply('you reacted with a thumbs down.');
+			if(p[uid].card < 100) return bot.send("Недостаточно тикетов для транзакции");
+			p[uid].coins += 100;
+			p[uid].card -= 100;
+		bot.send("Банковский терминал выдал вам 100🎫");
 		}
 	})
 	.catch(collected => {
-		message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
+		message.reply('Время транзакции вышло.');
 	});
 	
 };
 
 module.exports.help = {
-    name: "emoji"
+    name: "bank"
 };
