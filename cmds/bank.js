@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
 const p = require("../profile.json");
+let bank = require("../bank.json");
 
 module.exports.run = async (bot,message,args) => {
 	let uid = message.author.id;
@@ -9,6 +10,7 @@ let embed = new Discord.RichEmbed()
 .setTitle("ОТД БАНК")
 .addField("💶Наличные", p[uid].coins, true)
 .addField("💳На карте", p[uid].card, true)
+.addField("🏦Всего в банке", bank.coins, true)
 .setFooter("💳 - чтобы положить 100🎫 на карту | 👝 - Чтобы снять 100🎫 с карты")
 
 var emess = await message.channel.send(embed);
