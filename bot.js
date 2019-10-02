@@ -49,7 +49,8 @@ bot.on('message', async message => {
       lvl:0,
       vip:false,
       status: "none set",
-      card:0
+      card:0,
+      copy: "none"
     };
   };
     if(!guildd[gid]) {
