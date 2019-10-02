@@ -33,8 +33,8 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 			p[uid].card -= g[gid].cost;
 			let role = g[gid].buyrole;
 			let MemBer = message.author;
-			const roles = message.guild.roles.find('name', role);
-                        MemBer.addRole(roles);
+			const roless = message.guild.roles.find('name', role);
+                        MemBer.addRole(roless);
 
 			
 		bot.send(`Вы купили роль`);
