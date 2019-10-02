@@ -4,16 +4,15 @@ const shop = require("../guildsshop.json");
 module.exports.run = async (bot,message,args) => {
   let gid = message.guild.id;
   
-  if(shop[gid].buyrole !== "none") return bot.send("У вас уже есть роль. Удалите старую используя ``.setshop delete``");
   let role = args.join(" ");
   let cost = args.pop();
   
   shop[gid].buyrole = role;
   shop[gid].cost = cost;
+  if(shop[gid].buyrole !== "none") {
+    bot.send("Роль была изменена");
+    } else {
   bot.send("Роль была добавлена в магазин вашего сервера");
-  if ( args.length === 1 && args[ 0 ] === 'delete' ) {
-    shop[gid].buyrole = "none"
-    shop[gid].cost = "none"
   }
 };
 
