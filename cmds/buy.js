@@ -32,7 +32,7 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if(p[uid].card < g[gid].cost) return bot.reply("Недостаточно тикетов для транзакции");
 			p[uid].card -= g[gid].cost;
 			let roless = g[gid].buyrole;
-			let GuildMember = guild.member;
+			
 			
 	message.member.addRole(roless)
   .then(console.log)
