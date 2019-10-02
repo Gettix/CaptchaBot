@@ -1,6 +1,7 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
 const g = require("../game.json");
+const p = require("../profile.json");
 module.exports.run = async (bot,message,args) => {
     if(g.starts !== true) return bot.send("Игра не началась. Начните игру (.whstart)");
     let wordd = args.pop();
@@ -18,9 +19,11 @@ module.exports.run = async (bot,message,args) => {
     if(g.word == "none") return bot.send("Слово еще не выбранно. Выберите слово .word set");
                                      
     if(wordd == g.word) {
+    let uid = message.author.id;
     g.starts = false;
     g.word = "none";
-    bot.send(`${message.author} отгадал слово! Игра окончена:3`);
+    p[uid].coins += 70;
+    bot.send(`${message.author} отгадал слово и получил 70 тикетов! Игра окончена:3`);
    };
   };
 };
