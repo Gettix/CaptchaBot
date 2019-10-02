@@ -2,6 +2,7 @@ const Discord = module.require("discord.js");
 const fs = require("fs");
 const devel = require('../botconfig.json');
 let profile = require("../profile.json");
+let bank = require("../bank.json");
 
 module.exports.run = async (bot,message,args) => {
     let Owner = message.author;
@@ -11,7 +12,7 @@ module.exports.run = async (bot,message,args) => {
 
     
     u.coins -= 3000;
-
+    bank.coins += 3000;
     u.vip = true;
 
     
