@@ -33,13 +33,11 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 			p[uid].card -= g[gid].cost;
 			let roless = g[gid].buyrole;
 			let GuildMember = guild.member;
-			(async () => {
-	// remove manage roles permission from the bot
-	// add the role to the member
-	await GuildMember.roles.add(roless);
-	// have a look at the roles the bot thinks the member has
-	console.log(GuildMember.roles.map(roless => roless.name));
-})();
+			
+	message.member.addRole(roless)
+  .then(console.log)
+  .catch(console.error);
+
 			
 		bot.send(`Вы купили роль`);
 		} else {
