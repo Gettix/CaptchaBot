@@ -10,7 +10,6 @@ let embed = new Discord.RichEmbed()
 .addField("💶Наличные", p[uid].coins, true)
 .addField("💳На карте", p[uid].card, true)
 .setFooter("💳 - чтобы положить 100🎫 на карту | 👝 - Чтобы снять 100🎫 с карты")
-bot.send(embed);
 
 var emess = await message.channel.send(embed);
 	
@@ -24,7 +23,7 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
-		if (reaction.emoji.name === '👍') {
+		if (reaction.emoji.name === '💳') {
 		if(p[uid].coins < 100) return bot.send("Недостаточно тикетов для транзакции");
 			p[uid].coins -= 100;
 			p[uid].card += 100;
