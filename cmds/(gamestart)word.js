@@ -10,7 +10,7 @@ module.exports.run = async (bot,message,args) => {
     if(g.word !== 'none') return bot.send("Слово уже выбранно");
     message.delete().catch();
     g.word = wordd;
-    
+    g.gv = message.author.id;
     bot.send(`Слово выбрано. Ведущий ${message.author}. Введите .word is <word> для отгадки слова.`);
     }
     
@@ -19,6 +19,7 @@ module.exports.run = async (bot,message,args) => {
     if(g.word == "none") return bot.send("Слово еще не выбранно. Выберите слово .word set");
                                      
     if(wordd == g.word) {
+    if(message.author.id == g.gv) return bot.send("Ведущие не могут отгадывать");
     let uid = message.author.id;
     g.starts = false;
     g.word = "none";
