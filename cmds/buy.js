@@ -28,13 +28,16 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		const reaction = collected.first();
 
 		if (reaction.emoji.name === '💳') {
-		if(p[uid].coins < 100) return bot.reply("Недостаточно тикетов для транзакции");
+		if(p[uid].card < g[gid].cost) return bot.reply("Недостаточно тикетов для транзакции");
 			p[uid].card -= g[gid].cost;
 			
+			message.member.addRole( g[gid].buyrole ).catch( err => message.channel.send( err,
+      {
+        code: 'js'
+      } ) )
 			
 		bot.send(`Вы купили роль ${g[gid].buyrole}`);
 		} else {
-			if(p[uid].card < 100) return bot.send("Недостаточно тикетов для транзакции");
 		bot.send("Вы отклонили платеж❎");
 		}
 	});
