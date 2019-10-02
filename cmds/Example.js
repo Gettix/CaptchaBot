@@ -24,15 +24,15 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		const reaction = collected.first();
 
 		if (reaction.emoji.name === '💳') {
-		if(p[uid].coins < 100) return bot.send("Недостаточно тикетов для транзакции");
+		if(p[uid].coins < 100) return bot.reply("Недостаточно тикетов для транзакции");
 			p[uid].coins -= 100;
 			p[uid].card += 100;
-		bot.send("На карту закинуто 100🎫");
+		bot.reply("На карту закинуто 100🎫");
 		} else {
 			if(p[uid].card < 100) return bot.send("Недостаточно тикетов для транзакции");
 			p[uid].coins += 100;
 			p[uid].card -= 100;
-		bot.send("Банковский терминал выдал вам 100🎫");
+		bot.reply("Банковский терминал выдал вам 100🎫");
 		}
 	})
 	.catch(collected => {
