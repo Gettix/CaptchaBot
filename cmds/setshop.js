@@ -7,7 +7,7 @@ module.exports.run = async (bot,message,args) => {
     shop[gid].buyrole = "none"
     shop[gid].cost = "none"
   }
-  if(shop.buyrole !== "none") return bot.send("У вас уже есть роль. Удалите старую используя ``.setshop delete``");
+  if(shop[gid].buyrole !== "none") return bot.send("У вас уже есть роль. Удалите старую используя ``.setshop delete``");
   let role = args.join(" ");
   let cost = args.pop();
   shop[gid].buyrole = role;
