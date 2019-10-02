@@ -9,6 +9,11 @@ module.exports.run = async (bot,message,args) => {
     g.starts = true;
     bot.send("Игра началась!! Кто первый введет слово тот и будет ведущим! (.word set <word>)");
     };
+   if ( args.length === 1 && args[ 0 ] === 'stop' ) {
+    message.delete().catch();
+    g.starts = false;
+    bot.send(` ${message.author} Остановил игру`);
+    }
   
 };
 
