@@ -8,6 +8,7 @@ let config = require('./botconfig.json');
 let g = require('./game.json');
 let prefix = config.prefix;
 let profile = require('./profile.json');
+let guild = require('./guildshop.json');
 
 fs.readdir('./cmds',(err,files)=>{
   if(err) console.log(err);
@@ -35,6 +36,7 @@ bot.on('guildMemberAdd',(member)=>{
 bot.on('message', async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
+  let gid = message.guild.id;
   let uid = message.author.id;
   bot.send = function (msg){
     message.channel.send(msg);
