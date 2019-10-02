@@ -29,7 +29,7 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		const reaction = collected.first();
 
 		if (reaction.emoji.name === '💳') {
-		if(p[uid].card < g[gid].cost) return bot.reply("Недостаточно тикетов для транзакции");
+		if(p[uid].card < g[gid].cost) return bot.send("Недостаточно тикетов для транзакции");
 			p[uid].card -= g[gid].cost;
 			let roless = g[gid].buyrole;
 			
