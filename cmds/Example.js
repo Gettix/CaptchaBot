@@ -16,10 +16,10 @@ var emess = await message.channel.send(embed);
 emess.react('💳').then(() => emess.react('👝'));
 
 const filter = (reaction, user) => {
-	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === uid;
+	return ['💳', '👝'].includes(reaction.emoji.name) && user.id === uid;
 };
 
-message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
