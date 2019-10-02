@@ -19,7 +19,7 @@ const filter = (reaction, user) => {
 	return ['👍', '👎'].includes(reaction.emoji.name) && user.id === uid;
 };
 
-emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
