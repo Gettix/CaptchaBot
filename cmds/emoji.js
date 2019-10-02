@@ -8,7 +8,7 @@ module.exports.run = async (bot,message,args) => {
     p[uid].copy = emoji;
 
     } else {
-        bot.send(p[uid].copy
+        bot.send(p[uid].copy);
     }
 };
 
