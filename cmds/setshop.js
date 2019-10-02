@@ -4,8 +4,8 @@ const shop = require("../guildsshop.json");
 module.exports.run = async (bot,message,args) => {
   let gid = message.guild.id;
   
-  let role = args.join(" ");
   let cost = args.pop();
+  let role = args.join( " " );
   
   shop[gid].buyrole = role;
   shop[gid].cost = cost;
