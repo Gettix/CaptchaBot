@@ -11,7 +11,7 @@ module.exports.run = async (bot,message,args) => {
 	
 let embed = new Discord.RichEmbed()
 .setTitle("Магазин Ролей")
-.addField("👤Роль", g[gid].buyrole, true)
+.addField("👤Роль", g[gid].namerole, true)
 .addField("💶Цена", g[gid].cost, true)
 .addField("💳У вас на карте", p[uid].card)
 .setFooter("💳 - чтобы купить роль | ❎ - Чтобы отклонить")
