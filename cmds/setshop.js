@@ -2,6 +2,7 @@ const Discord = module.require("discord.js");
 const fs = require("fs");
 const shop = require("../guildsshop.json");
 module.exports.run = async (bot,message,args) => {
+  if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("У Вас нет прав");
   let gid = message.guild.id;
   
   let cost = args.pop();
