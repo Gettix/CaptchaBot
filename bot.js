@@ -8,7 +8,7 @@ let config = require('./botconfig.json');
 let g = require('./game.json');
 let prefix = config.prefix;
 let profile = require('./profile.json');
-let guild = require('./guildshop.json');
+let guildd = require('./guildsshop.json');
 
 fs.readdir('./cmds',(err,files)=>{
   if(err) console.log(err);
@@ -52,6 +52,13 @@ bot.on('message', async message => {
       card:0
     };
   };
+    if(!guildd[gid]) {
+    guildd[gid] ={
+    buyrole: "none",
+    cost: "none"
+    };
+  };
+  
   let u = profile[uid];
   
   u.coins ++;
