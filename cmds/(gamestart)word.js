@@ -7,7 +7,9 @@ module.exports.run = async (bot,message,args) => {
     
     if ( args.length === 1 && args[ 0 ] === 'set' ) {
     if(g.word !== 'none') return bot.send("Слово уже выбранно");
+    message.delete().catch();
     g.word = wordd;
+    
     bot.send(`Слово выбрано. Ведущий ${message.author}. Введите .word is <word> для отгадки слова.`);
     }
     
