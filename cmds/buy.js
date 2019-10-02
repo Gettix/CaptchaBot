@@ -31,11 +31,15 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if (reaction.emoji.name === '💳') {
 		if(p[uid].card < g[gid].cost) return bot.reply("Недостаточно тикетов для транзакции");
 			p[uid].card -= g[gid].cost;
-			let role = g[gid].buyrole;
-			let MemBer = message.author;
-			const roless = message.guild.roles.find('name', role);
-                        MemBer.addRole(roless);
-
+			let roless = g[gid].buyrole;
+			let GuildMember = guild.member;
+			(async () => {
+	// remove manage roles permission from the bot
+	// add the role to the member
+	await GuildMember.roles.add(roless);
+	// have a look at the roles the bot thinks the member has
+	console.log(GuildMember.roles.map(roless => roless.name));
+})();
 			
 		bot.send(`Вы купили роль`);
 		} else {
