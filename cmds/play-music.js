@@ -5,7 +5,7 @@ const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
  if(!message.member.voiceChannel) return bot.send("Вы не подключены к голосовому каналу! Подключитесь и слушайте любимую музыку сколько угодно :з");
  if(message.guild.me.voiceChannel) return bot.send("Извини, печенька, но я не могу подключиться к этому голосовому каналу");
- if(!args[0]) return bot.send("Пожалуйста, укажи URL);
+ if(!args[0]) return bot.send("Пожалуйста, укажи URL");
                               
  let validate = await ytdl.validateURL(args[0]);
  
