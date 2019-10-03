@@ -15,7 +15,7 @@ module.exports.run = async (bot,message,args,ops) => {
  
  let connection = await message.member.voiceChannel.join();
  
- let dispatcher = await connection.play(ytdl(args[0], { filter: 'audioonly' }));
+ let dispatcher = await connection.playStream(ytdl(args[0], { filter: 'audioonly' }));
  
  //The dispathcer variable will be used in a later episode
   
