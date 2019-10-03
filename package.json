@@ -11,7 +11,8 @@
     "node-opus": "^0.3.2",
     "ffmpeg": "^0.0.4",
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
-    "ffmpeg-static": "^2.6.0"
+    "ffmpeg-static": "^2.6.0",
+    "fluent-ffmpeg": "^2.1.2"
   },
   "devDependencies": {},
   "scripts": {
