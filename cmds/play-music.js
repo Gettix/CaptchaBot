@@ -9,7 +9,7 @@ module.exports.run = async (bot,message,args) => {
                               
  let validate = await ytdl.validateURL(args[0]);
  
- if(!validate) return bot.send("Извините, укажите **действительный** URL);
+ if(!validate) return bot.send("Извините, укажите **действительный** URL");
  
  let info = await ytdl.getInfo(args[0]);
  
