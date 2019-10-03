@@ -56,7 +56,7 @@ bot.on('message', async message => {
     if(!guildd[gid]) {
     guildd[gid] ={
     buyrole: "none",
-    cost: "none",
+    cost:0,
     namerole: "none"
     };
   };
