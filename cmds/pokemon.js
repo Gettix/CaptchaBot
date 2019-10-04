@@ -6,7 +6,13 @@ const pokemonGif = require("pokemon-gif");
 const inv = require("../pokemon.json");
 
 module.exports.run = async (bot,message,args) => {
-
+if (workedRecently.has(message.author.id)) {
+        message.channel.send("Подождите 10 секунд и попробуйте заново. - " + message.author.username);
+    } else {
+        workedRecently.add(message.author.id);
+        setTimeout(() => {
+            workedRecently.delete(message.author.id);
+        }, 10000);
 let uid = message.author.id;
 var poke = await pokemon.random();
 var pokegif = pokemonGif(poke);
