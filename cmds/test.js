@@ -17,7 +17,14 @@ function getPage(item, pageNumber) {
         .setFooter(`Page ${pageNumber}/${items.length}`)
 }
  
-let pagination = Pagination.create(message, {time: 60000, userID: message.author.id, items: items, getPage: getPage, removeReactions: true});
+let pagination = Pagination.create(message, {time: 60000, userID: message.author.id, items: items, getPage: getPage, removeReactions: true}
+           "reactions": {
+    "nextPage": "▶",
+    "previousPage": "◀",
+    "skipToFinal": "⏩",
+    "backToStart": "⏪",
+    "cancel": "🚫"
+});
 /* 
 If you want to customize the Paginations Reactions add the property "reactions" to the options
 Example:
