@@ -6,14 +6,14 @@ let items = ['Banana', 'Apple'];
 
 let re = new Discord.RichEmbed()
 .setColor('RANDOM')
-        .setDescription(item)
+        .setDescription("lol")
         .setFooter('blat')
 bot.send(re);
  
 function getPage(item, pageNumber) {
     return new RichEmbed()
         .setColor('RANDOM')
-        .setDescription("Hmmm")
+        .setDescription(item)
         .setFooter(`Page ${pageNumber}/${items.length}`)
 }
  
