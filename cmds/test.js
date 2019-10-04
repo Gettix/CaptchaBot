@@ -1,7 +1,7 @@
 const {Pagination} = require('discord-interface');
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args)
+module.exports.run = async (bot, message, args) => {
 let items = ['Banana', 'Apple'];
  
 function getPage(item, pageNumber) {
@@ -28,8 +28,13 @@ Example:
 // Pagination Events
 pagination.on('over', timeOver => {
     if (timeOver) {
-        // The time is over
+        bot.send("TimeOver");
     } else {
-        // User stopped the collector
+        bot.send("Я агурец");
     }
 });
+};
+
+module.exports.help = {
+ name: "test"
+}
