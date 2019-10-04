@@ -1,4 +1,4 @@
-const {Pagination} = require('discord-interface');
+const {Pagination} = require('discord-interface2');
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
