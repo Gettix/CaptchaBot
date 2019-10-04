@@ -17,7 +17,7 @@ if (workedRecently.has(message.author.id)) {
 let uid = message.author.id;
 var poke = await pokemon.random();
 var pokegif = pokemonGif(poke);
-inv[uid].names += "," + poke;
+inv[uid].names += ", " + poke;
 inv[uid].num += 1
 
 let pokemed = new Discord.RichEmbed()
