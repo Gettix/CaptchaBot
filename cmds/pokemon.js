@@ -7,7 +7,7 @@ const pokegif = require("pokemon-gif");
 module.exports.run = async (bot,message,args) => {
 
 var poke = await pokemon.random();
-var pokegif = await pokegif(poke);
+var pokegif = await pokemonGif(poke);
 
 let pokemed = new Discord.RichEmbed()
 .setTitle(`Вы поймали ${poke}`)
