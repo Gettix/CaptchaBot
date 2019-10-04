@@ -3,6 +3,12 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
 let items = ['Banana', 'Apple'];
+
+let re = new Discord.RichEmbed()
+.setColor('RANDOM')
+        .setDescription(item)
+        .setFooter('blat')
+bot.send(re);
  
 function getPage(item, pageNumber) {
     return new RichEmbed()
