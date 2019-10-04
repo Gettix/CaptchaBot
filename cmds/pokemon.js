@@ -17,5 +17,5 @@ bot.send(pokembed);
 };
 
 module.exports.help = {
-    name: "ping"
+    name: "poke"
 };
