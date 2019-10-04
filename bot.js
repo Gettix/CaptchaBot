@@ -4,6 +4,7 @@ bot.commands = new Discord.Collection();
 const fs = require('fs');
 const token = process.env.BOT_TOKEN;
 let config = require('./botconfig.json');
+const pokemon = reqquire('./pokemon.json');
 
 let g = require('./game.json');
 let prefix = config.prefix;
@@ -51,6 +52,12 @@ bot.on('message', async message => {
       status: "none set",
       card:0,
       copy: "none"
+    };
+  };
+    if(!pokemon[uid]) {
+    pokemon[uid] ={
+      num: 0,
+      names: "none"
     };
   };
     if(!guildd[gid]) {
