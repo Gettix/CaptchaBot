@@ -9,7 +9,7 @@ module.exports.run = async (bot,message,args) => {
   let inventory = new Discord.RichEmbed()
   .setTitle("Ваш инвентарь")
   .setColor('#e22216')
-  .addField('Количество покемонов', number, true)
+  .addField('Количество покемонов', numer, true)
   .addField("Покемоны:", pokeinv, true)
   bot.send(inventory);
 };
