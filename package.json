@@ -14,7 +14,8 @@
     "ytdl-core": "0.29.7",
     "node-opus": "0.3.2",
     "ffmpeg-binaries": "4.0.0",
-    "ffmpeg": "0.0.4"
+    "ffmpeg": "0.0.4",
+    "ytdl-core-discord": "^1.0.3"
   },
   "devDependencies": {},
   "scripts": {
