@@ -13,7 +13,7 @@ bot.send(re);
 function getPage(item, pageNumber) {
     return new RichEmbed()
         .setColor('RANDOM')
-        .setDescription(item)
+        .setDescription("Hmmm")
         .setFooter(`Page ${pageNumber}/${items.length}`)
 }
  
