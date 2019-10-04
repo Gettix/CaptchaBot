@@ -5,6 +5,10 @@
   "main": "bot.js",
   "dependencies": {
     "discord.js": "^11.4.2",
+    "opus-recorder": "^6.1.1",
+    "opus-encode": "^2.0.2",
+    "is-opus": "^1.0.0",
+    "opus-to-pcm": "^1.0.2",
     "superagent": "5.0.2",
     "ytdl-core": "0.29.7",
     "node-opus": "0.3.2",
