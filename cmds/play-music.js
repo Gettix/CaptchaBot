@@ -2,7 +2,7 @@ const ytdl = require("ytdl-core");
 const Discord = module.require("discord.js");
 const fs = require("fs");
 
-module.exports.run = async (bot,message,args,ops) => {
+exports.run = async (bot,message,args,ops) => {
  if(!message.member.voiceChannel) return bot.send("Вы не подключены к голосовому каналу! Подключитесь и слушайте любимую музыку сколько угодно :з");
  if(message.guild.me.voiceChannel) return bot.send("Извини, печенька, но я не могу подключиться к этому голосовому каналу");
  if(!args[0]) return bot.send("Пожалуйста, укажи URL");
