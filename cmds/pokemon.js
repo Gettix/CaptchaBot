@@ -12,7 +12,7 @@ var pokegif = pokemonGif(poke);
 let pokemed = new Discord.RichEmbed()
 .setTitle(`Вы поймали ${poke}`)
 .setImage(pokegif)
-bot.send(pokembed);
+bot.send(pokemed);
 
 };
 
