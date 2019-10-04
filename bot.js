@@ -57,7 +57,7 @@ bot.on('message', async message => {
     if(!pokemon[uid]) {
     pokemon[uid] ={
       num: 0,
-      names: "none"
+      names: " "
     };
   };
     if(!guildd[gid]) {
