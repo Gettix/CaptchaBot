@@ -6,6 +6,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "opus-recorder": "^6.1.1",
+    "opusscript": "0.0.7",
     "opus-encode": "^2.0.2",
     "is-opus": "^1.0.0",
     "opus-to-pcm": "^1.0.2",
