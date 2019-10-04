@@ -4,6 +4,7 @@ const fs = require("fs");
 const pokemon = require("pokemon");
 const pokemonGif = require("pokemon-gif");
 const inv = require("../pokemon.json");
+const workedRecently = new Set();
 
 module.exports.run = async (bot,message,args) => {
 if (workedRecently.has(message.author.id)) {
@@ -23,7 +24,7 @@ let pokemed = new Discord.RichEmbed()
 .setTitle(`Вы поймали ${poke}`)
 .setImage(pokegif)
 bot.send(pokemed);
-
+    };
 };
 
 module.exports.help = {
