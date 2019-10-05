@@ -30,10 +30,7 @@ bot.on('ready', () => {
     console.log(link);
   })
 });
-bot.on('guildMemberAdd',(member)=>{
-  let role = member.guild.roles.find('name',"[I]Новенький");
-  member.addRole(role);
-});
+
 bot.on('message', async message => {
   if(message.author.bot) return;
   if(message.channel.type == "dm") return;
@@ -109,8 +106,8 @@ bot.on('message', async message => {
 })*/
 
 bot.on('guildMemberAdd', async member => {
-  let role = member.guild.roles.find(r => r.name == "Community")
-  let channel = member.guild.channels.find(c => c.name == 'actions')
+  let role = member.guild.roles.find(r => r.name == guildd[gid].roleadd)
+  let channel = member.guild.channels.find(c => c.name == guildd[gid].actionch)
 
   let embed = new Discord.RichEmbed()
       .setAuthor('Пользователь присоеденился', member.user.avatarURL)
@@ -129,7 +126,7 @@ bot.on('guildMemberRemove', async member => {
       .setColor('#6A696A')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
-  let channel = member.guild.channels.find(c => c.name == 'actions')
+  let channel = member.guild.channels.find(c => c.name == guildd[gid].actionch)
   await channels.send(embed)
 }) 
 
