@@ -73,10 +73,10 @@ bot.on('message', async message => {
   u.coins ++;
   u.xp++;
   if(u.xp>= (u.lvl * 5)){
-    u.coins = u.lvl * 2;
+    u.coins = u.lvl * 3;
     u.xp = 0;
     u.lvl += 1;
-    bot.send(`${message.author} ты заработал повышение уровня и ${u.lvl*2} тикетов! Теперь ты ${u.lvl} лвла`);
+    bot.send(`${message.author} ты заработал повышение уровня и ${u.lvl*3} тикетов! Теперь ты ${u.lvl} лвла`);
   }
   fs.writeFile('./profile.json',JSON.stringify(profile),(err) =>{
     if(err) console.log(err);
