@@ -8,8 +8,8 @@
     "opusscript": "0.0.7",
     "superagent": "5.0.2",
     "pokemon": "2.0.0",
-    "pokemon-gif": "1.0.14"
-
+    "pokemon-gif": "1.0.14",
+    "ms": "2.1.2"
   },
   "devDependencies": {},
   "scripts": {
