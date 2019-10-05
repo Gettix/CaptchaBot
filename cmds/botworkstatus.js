@@ -1,6 +1,9 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
+const devel = require("../botconfig.json");
 module.exports.run = async (bot,message,args) => {
+    let Owner = message.author;
+    if(Owner.id !== devel.dev) return message.reply("Only the bot owner can use this command!")
   let news = args.pop();
     if ( args.length === 1 && args[ 0 ] === 'stable' ) {
         let good = new Discord.RichEmbed()
