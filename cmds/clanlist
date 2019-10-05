@@ -36,6 +36,7 @@ let password = generator.generate({
     };
     
     if ( args.length === 1 && args[ 0 ] === ' ' ) {
+    let info = clanlist[uid]
     let enbed = new Discord.RichEmbed()
     .setDescription("Clans")
     .setColor('#4B0082')
@@ -44,6 +45,7 @@ let password = generator.generate({
     bot.send(enbed);
     }
 };
+ 
 module.exports.help = {
     name: "clan"
 };
