@@ -67,7 +67,9 @@ bot.on('message', async message => {
     namerole: "none"
     };
   };
-  
+  if(bot.guild.join) {
+    bot.send("Привет! Спасибо, что добавили меня!)");
+    };
   let u = profile[uid];
   
   u.coins ++;
