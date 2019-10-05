@@ -64,7 +64,9 @@ bot.on('message', async message => {
     guildd[gid] ={
     buyrole: "none",
     cost:0,
-    namerole: "none"
+    namerole: "none",
+    actionch: "none",
+    roleadd: "none"
     };
   };
   
