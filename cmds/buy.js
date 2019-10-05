@@ -33,7 +33,7 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 			p[uid].card -= g[gid].cost;
 			let roless = g[gid].buyrole;
 			bank = {
-    bank: bank.coins + parseInt(args[1])
+    bank: bank.coins + parseInt(g[gid].cost)
 			}
 	message.member.addRole(roless)
   .then(console.log)
