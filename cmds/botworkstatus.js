@@ -7,7 +7,7 @@ module.exports.run = async (bot,message,args) => {
   let news = args.pop();
     if ( args.length === 1 && args[ 0 ] === 'stable' ) {
         let good = new Discord.RichEmbed()
-        .SetTitle("Сейчас Бот работает стабильно")
+        .setTitle("Сейчас Бот работает стабильно")
         .setColor('#33EF00')
         .addField("Интересное", news)
         
@@ -15,7 +15,7 @@ module.exports.run = async (bot,message,args) => {
     }
 if ( args.length === 1 && args[ 0 ] === 'unstable' ) {
         let nogood = new Discord.RichEmbed()
-        .SetTitle("Сейчас Бот работает не стабильно")
+        .setTitle("Сейчас Бот работает не стабильно")
         .setColor('#DF9F00')
         .addField("Интересное", news)
         
@@ -23,7 +23,7 @@ if ( args.length === 1 && args[ 0 ] === 'unstable' ) {
     }
     if ( args.length === 1 && args[ 0 ] === 'rework' ) {
         let nogood = new Discord.RichEmbed()
-        .SetTitle("Сейчас идет работа над ботом/Восстановление бота")
+        .setTitle("Сейчас идет работа над ботом/Восстановление бота")
         .setColor('#D60000')
         .addField("Интересное", news)
         
