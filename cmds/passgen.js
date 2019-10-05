@@ -12,7 +12,7 @@ var password = generator.generate({
  let pass = new Discord.RichEmbed()
  .setTitle("Генератор пароля :3")
  .addField("Ваш пароль:", password)
- .setFooter(`Длинна: ${len} || LOL`)
+ .setFooter(`Длина: ${len} || LOL`)
  bot.send(pass);
 }
 
