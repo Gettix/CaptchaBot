@@ -5,8 +5,10 @@ module.exports.run = async (bot,message,args) => {
     let enbed = new Discord.RichEmbed() 
     .setTitle("Lol")
     bot.send(enbed);
-    enbed.edit(
-        .setTitle("Я лох"));
+    let newe = new Discord.RichEmbed()
+    .setTitle("Блет");
+    message.edit(newe);
+
 };
 
 module.exports.help = {
