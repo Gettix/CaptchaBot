@@ -39,8 +39,6 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
   .then(console.log)
   .catch(console.error);
 
-		return new embed()
-	        .setTitle("Вы купили роль");
 		bot.send(`Вы купили роль`);
 		} else {
 		bot.send("Вы отклонили платеж❎");
