@@ -24,7 +24,7 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if (reaction.emoji.name === '▶') {
 		
 			
-		.send("На карту закинуто 100🎫");
+		message.edit("Страница 2");
 		} else {
 			if(p[uid].card < 100) return bot.send("Недостаточно тикетов для транзакции");
 			p[uid].coins += 100;
