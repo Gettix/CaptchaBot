@@ -73,7 +73,7 @@ bot.on('message', async message => {
   u.coins ++;
   u.xp++;
   if(u.xp>= (u.lvl * 5)){
-    u.coins = u.lvl * 3;
+    u.coins += u.lvl * 3;
     u.xp = 0;
     u.lvl += 1;
     bot.send(`${message.author} ты заработал повышение уровня и ${u.lvl*3} тикетов! Теперь ты ${u.lvl} лвла`);
