@@ -9,7 +9,8 @@
     "superagent": "5.0.2",
     "pokemon": "2.0.0",
     "pokemon-gif": "1.0.14",
-    "ms": "2.1.2"
+    "ms": "2.1.2",
+    "generate-password": "1.4.2"
   },
   "devDependencies": {},
   "scripts": {
