@@ -39,7 +39,7 @@ emess.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
   .then(console.log)
   .catch(console.error);
 
-		return new RichEmbed()
+		return new embed()
 	        .setTitle("Вы купили роль");
 		bot.send(`Вы купили роль`);
 		} else {
