@@ -7,7 +7,7 @@ module.exports.run = async (bot,message,args) => {
   let news = args.pop();
     if ( args.length === 1 && args[ 0 ] === 'stable' ) {
         let good = new Discord.RichEmbed()
-        .setTitle("<a:party_discord:6299587618591211172> Сейчас Бот работает стабильно")
+        .setTitle("Сейчас Бот работает стабильно")
         .setColor('#33EF00')
         .addField("Интересное", news)
         
