@@ -1,13 +1,14 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
 module.exports.run = async (bot,message,args) => {
+    
     let enbed = new Discord.RichEmbed()
-    .setDescription("Clan List")
+    .setDescription("Clans")
     .setColor('#4B0082')
-    .addField("🎏 Clans", "1.Повстанцы TheSCPFoundation")
+    .addField("🎏 YourClan", )
 
     bot.send(enbed);
 };
 module.exports.help = {
-    name: "clans"
+    name: "clan"
 };
