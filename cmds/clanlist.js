@@ -24,13 +24,13 @@ let password = generator.generate({
         profile[uid].coins -= 1000;
         bank.coins += 1000;
     if(!clan[uid]) {
-    clan[uid]:
+    clan[uid]={
     "name": name,
     "flag": flag,
     "people": 1,
     "creator": u,
     "clanid": password
-    } else {
+    }} else {
     bot.send("У вас уже есть клан!");
     };
     
