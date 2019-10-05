@@ -20,9 +20,19 @@ module.exports.run = async (bot,message,args) => {
     .addField("***pay***", "*.pay <user> <quantity>*")
     .addField("***daily***", "*.daily*")
     .addField("***shop***", "*.shop*")
-    .addField("***work***", ".work");
+    .addField("***work***", ".work")
+    .addField("***bank***", ".bank")
     
     bot.send(enbed1);
+    
+    let enbedd = new Discord.RichEmbed()
+    .setDescription("Гильдия")
+    .setColor('#00f815')
+    .addField("***Set Shop(Only server-admin can)***", "*.setshop roleid(Например: 88228595965545) цена*")
+    .addField("***Shop Name(Only server-admin can)***", "*.shopname name*")
+    .addField("***Buy role***", "*.buy*")
+    
+    bot.send(enbedd);
     
     let enbed2 = new Discord.RichEmbed()
     .setDescription("Развлечения")
@@ -33,7 +43,10 @@ module.exports.run = async (bot,message,args) => {
     .addField("***slots***", "*.slots*")
     .addField("***gaym***", "*.gaym*")
     .addField("***hunt***", "*.hunt*")
-    .addField("***Doggy ^^ :dog:***", "*.dog*");
+    .addField("***Doggy ^^ :dog:***", "*.dog*")
+    .addField("***Word Hunter***", "*.whstart / .whstop*")
+    .addField("***Password Generator***", "*.passgen 8(Длинна пароля)*")
+    .addField("***Pokemons!!***", "*.poke / .inv*")
     
     bot.send(enbed2);
     
@@ -54,7 +67,8 @@ module.exports.run = async (bot,message,args) => {
     .addField("***embarassed***", ".embarassed")
     .addField("***hug***", "*.hug <user>*")
     .addField("***crossover***", "*.crossover*")
-    .addField("***level***", "*.lvl*");
+    .addField("***level***", "*.lvl*")
+    .addField("***emoji***", "*.emoji <emoji>(to copy) / .emoji paste (to paste)*")
     
     bot.send(enbed4);
     
