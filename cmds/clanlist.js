@@ -30,7 +30,8 @@ let password = generator.generate({
     "people": 1,
     "creator": u,
     "clanid": password
-    }}; else {
+    };
+    } else {
     bot.send("У вас уже есть клан!");
     };
     
