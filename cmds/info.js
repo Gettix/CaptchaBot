@@ -7,16 +7,16 @@ module.exports.run = async (bot,message,args) => {
 
 	let uid = message.author.id;
 	
-  message.channel.send("Станица один:3");
+ let toto = await message.channel.send("Станица один:3");
 
 	
-message.react('▶').then(() => message.react('◀'));
+toto.react('▶').then(() => toto.react('◀'));
 
 const filter = (reaction, user) => {
  return ['▶', '◀'].includes(reaction.emoji.name) && user.id === message.author.id;
 };
 
-message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+toto.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
