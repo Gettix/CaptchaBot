@@ -18,6 +18,7 @@ module.exports.run = async (bot, message, args) => {
         setTimeout(() => {
             workedRecently.delete(message.author.id);
         }, 86400000);
+      };
     send({
   text:    us + ": " + rmsg,  
 }, (error, result, fullResult) => {
