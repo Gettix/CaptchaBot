@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     let rmsg = args.join(" ");
     if(!rmsg) return bot.send("Напишите сообщение создателю бота");
     let us = message.author.username;
-  if (workedRecently.has(message.author.id)) {
+  if (workedRecently.has(message.author.id)) return {
         message.channel.send("Подождите 24 часа и попробуйте заново. - " + message.author.username);
     } else {
         workedRecently.add(message.author.id);
