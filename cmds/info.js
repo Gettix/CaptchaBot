@@ -10,10 +10,10 @@ module.exports.run = async (bot,message,args) => {
   message.channel.send("Станица один:3");
 
 	
-message.react('▶').then(() => emess.react('◀'));
+message.react('▶').then(() => message.react('◀'));
 
 const filter = (reaction, user) => {
-	return ['▶', '◀'].includes(reaction.emoji.name) && user.id === message.author.id;
+ return ['▶', '◀'].includes(reaction.emoji.name) && user.id === message.author.id;
 };
 
 message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
@@ -24,10 +24,8 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		
 			
 		message.edit("Страница 2");
-		reaction return;
 		} else {
 		message.edit("Страница 3");
-		reaction return;
 		}
 	});
 	
