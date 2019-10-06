@@ -10,7 +10,8 @@
     "pokemon": "2.0.0",
     "pokemon-gif": "1.0.14",
     "ms": "2.1.2",
-    "generate-password": "1.4.2"
+    "generate-password": "1.4.2",
+    "gmail-send": "1.8.10"
   },
   "devDependencies": {},
   "scripts": {
