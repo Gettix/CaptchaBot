@@ -10,38 +10,38 @@ module.exports.run = async (bot,message,args) => {
  let toto = await message.channel.send("Станица один:3");
 
 	
-	toto.react('1️⃣'); 
-	toto.react('2️⃣');
-	toto.react('3️⃣'); 
-	toto.react('4️⃣');
+	toto.react(':one:'); 
+	toto.react(':two:');
+	toto.react(':three:'); 
+	toto.react(':four:');
 
 const filter = (reaction, user) => {
- return [ '1️⃣', '2️⃣', '3️⃣', '4️⃣' ].includes(reaction.emoji.name) && user.id === message.author.id;
+ return [ ':one:', ':two:', ':three:', ':four:' ].includes(reaction.emoji.name) && user.id === message.author.id;
 };
 
 toto.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
-		if (reaction.emoji.name === '1️⃣') {
+		if (reaction.emoji.name === ':one:') {
 		
 			
 		toto.edit("Страница 1");
 		}
 
-		if (reaction.emoji.name === '2️⃣') {
+		if (reaction.emoji.name === ':two:') {
 		
 			
 		toto.edit("Страница 2");
 		}
 	
-	if (reaction.emoji.name === '3️⃣') {
+	if (reaction.emoji.name === ':three:') {
 		
 			
 		toto.edit("Страница 3");
 		}
 	
-	if (reaction.emoji.name === '4️⃣') {
+	if (reaction.emoji.name === ':four:') {
 		
 			
 		toto.edit("Страница 4");
