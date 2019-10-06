@@ -3,15 +3,16 @@ const send = require('gmail-send')({
   user: 'userbotreport@gmail.com',
   pass: 'YuraYura1',
   to:   'tishofs@gmail.com',
-  subject: 'Feedback',
 });
 
 module.exports.run = async (bot, message, args) => {
     
     let rmsg = args.join(" ");
     if(!rmsg) return bot.send("Напишите сообщение создателю бота");
+    let us = message.author;
     send({
   text:    rmsg,  
+  subject: us,
 }, (error, result, fullResult) => {
   if (error) console.error(error);
   console.log(result);
