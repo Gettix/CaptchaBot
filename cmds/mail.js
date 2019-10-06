@@ -13,12 +13,14 @@ module.exports.run = async (bot, message, args) => {
     if(!rmsg) return bot.send("Напишите сообщение создателю бота");
     let us = message.author.username;
   
-  if (workedRecently.has(message.author.id)) return bot.send("Подождите 24 часа и попробуйте заново. - " + us) else {
+  if (workedRecently.has(message.author.id)) { 
+    bot.send("Подождите 24 часа и попробуйте заново. - " + us);
+  } else {
         workedRecently.add(message.author.id);
         setTimeout(() => {
             workedRecently.delete(message.author.id);
         }, 86400000);
-      };
+      
     send({
   text:    us + ": " + rmsg,  
 }, (error, result, fullResult) => {
@@ -28,6 +30,7 @@ module.exports.run = async (bot, message, args) => {
 
     bot.send(`${us}, Сообщение отправлено на почту разработчику✅`);
     message.delete().catch(O_o=>{});
+    };
 
 }
  
