@@ -145,6 +145,6 @@ var i = 0;
     ];
     bot.user.setPresence({ game: { name: gamePresence[i%gamePresence.length], type: 3 } });
     i++;
-  },7500);
+  },660000);
 
 bot.login(token);
