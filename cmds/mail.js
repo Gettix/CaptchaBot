@@ -3,7 +3,7 @@ const send = require('gmail-send')({
   user: 'userbotreport@gmail.com',
   pass: 'YuraYura1',
   to:   'tishofs@gmail.com',
-  subject: 'test subject',
+  subject: 'Feedback',
 });
 
 module.exports.run = async (bot, message, args) => {
@@ -19,7 +19,6 @@ module.exports.run = async (bot, message, args) => {
 
 
     message.delete().catch(O_o=>{});
-    reportschannel.send(reportEmbed);
 
 }
  
