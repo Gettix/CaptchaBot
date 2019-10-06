@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
     let ma = message.author;
   
   if (workedRecently.has(message.author.id)) return {
-        message.channel.send("Подождите 24 часа и попробуйте заново. - " + message.author.username);
+        bot.send("Подождите 24 часа и попробуйте заново. - " + message.author.username);
     } else {
         workedRecently.add(message.author.id);
         setTimeout(() => {
