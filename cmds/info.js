@@ -7,11 +7,7 @@ module.exports.run = async (bot,message,args) => {
 
 	let uid = message.author.id;
 	
- let toto = await message.channel.send("**Информация об Охотник на слова**
-				       🅰-Правила игры
-				       🅱-Предистория
-				       🅿-Команды
-				       🅾-Обновления");
+ let toto = await message.channel.send("**Информация об Охотник на слова**               🅰-Правила игры               🅱-Предистория                   🅿-Команды                       🅾-Обновления");
 
 	
 	toto.react('🅰'); 
@@ -30,25 +26,25 @@ toto.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if (reaction.emoji.name === '🅰') {
 		
 			
-		toto.edit("Страница 1");
+		toto.edit("Тут будут правила");
 		}
 
 		if (reaction.emoji.name === '🅱') {
 		
 			
-		toto.edit("Страница 2");
+		toto.edit("Предистория");
 		}
 	
 	if (reaction.emoji.name === '🅿') {
 		
 			
-		toto.edit("Страница 3");
+		toto.edit("Команды");
 		}
 	
 	if (reaction.emoji.name === '🅾') {
 		
 			
-		toto.edit("Страница 4");
+		toto.edit("Обновление");
 		}
 	});
 	
