@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     
     let rmsg = args.join(" ");
     if(!rmsg) return bot.send("Напишите сообщение создателю бота");
-    let us = message.author;
+    let us = message.author.username;
     send({
   text:    us + ": " + rmsg,  
 }, (error, result, fullResult) => {
