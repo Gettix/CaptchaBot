@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const workedRecently = new Set();
 const send = require('gmail-send')({
   user: 'userbotreport@gmail.com',
   pass: 'YuraYura1',
