@@ -7,7 +7,11 @@ module.exports.run = async (bot,message,args) => {
 
 	let uid = message.author.id;
 	
- let toto = await message.channel.send("Станица один:3");
+ let toto = await message.channel.send("**Информация об Охотник на слова**
+				       🅰-Правила игры
+				       🅱-Предистория
+				       🅿-Команды
+				       🅾-Обновления");
 
 	
 	toto.react('🅰'); 
