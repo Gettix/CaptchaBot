@@ -4,7 +4,6 @@ const p = require("../profile.json");
 let bank = require("../bank.json");
 
 module.exports.run = async (bot,message,args) => {
-{"page": 1};
 
 	let uid = message.author.id;
 	
@@ -25,11 +24,10 @@ message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		
 			
 		message.edit("Страница 2");
+		reaction return;
 		} else {
-			if(p[uid].card < 100) return bot.send("Недостаточно тикетов для транзакции");
-			p[uid].coins += 100;
-			p[uid].card -= 100;
-		bot.send("Банковский терминал выдал вам 100🎫");
+		message.edit("Страница 3");
+		reaction return;
 		}
 	});
 	
