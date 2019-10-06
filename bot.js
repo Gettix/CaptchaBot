@@ -135,11 +135,10 @@ var i = 0;
   timer = bot.setInterval(function () {
     var gamePresence = [
       `Спасибо за пользование мной)`,
-      `Мой создатель: Lava.js`,
       `Используй c!help чтобы узнать комманды`,
       `Всего каналов: ${bot.channels.size}`,
       `Пользователей: ${bot.users.size}`,
-      `Cacao | Bot`,
+      `WX-78 | Bot`,
       `Рп`,
       `Фан`
     ];
