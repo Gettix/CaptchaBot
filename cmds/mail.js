@@ -1,20 +1,21 @@
 const Discord = require("discord.js");
+const send = require('gmail-send')({
+  user: 'userbotreport@gmail.com',
+  pass: 'YuraYura1',
+  to:   'tishofs@gmail.com',
+  subject: 'test subject',
+});
 
 module.exports.run = async (bot, message, args) => {
     
-    let rreason = args.join(" ").slice(22);
-    let rmsg = args.join(" ").slice(1);
-
-    let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Mail.sru")
-    .setColor("#15f153")
-    .addField("Msg By", `${message.author} with ID: ${message.author.id}`)
-    .addField("Channel", message.channel)
-    .addField("Time", message.createdAt)
-    .addField("Msg", rreason)
-
-    let reportschannel = message.guild.channels.find(`name`, rmsg);
-    if(!reportschannel) return message.channel.send("Не удалось найти канал сообщений.");
+    let rmsg = args.join(" ");
+    if(!rmsg) return bot.send("Напишите сообщение создателю бота");
+    send({
+  text:    rmsg,  
+}, (error, result, fullResult) => {
+  if (error) console.error(error);
+  console.log(result);
+})
 
 
     message.delete().catch(O_o=>{});
