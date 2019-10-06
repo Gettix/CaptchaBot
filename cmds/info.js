@@ -23,9 +23,9 @@ toto.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 		if (reaction.emoji.name === '▶') {
 		
 			
-		message.edit("Страница 2");
+		toto.edit("Страница 2");
 		} else {
-		message.edit("Страница 3");
+		toto.edit("Страница 3");
 		}
 	});
 	
