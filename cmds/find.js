@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
     let gid = message.guild.id;
     let one = options[gid].actionch;
-    let two = options[gid].addrole;
+    let two = options[gid].roleadd;
     let tree = options[gid].temprole;
     let four = options[gid];
     
