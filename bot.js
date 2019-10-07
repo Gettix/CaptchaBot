@@ -117,7 +117,7 @@ bot.on('guildMemberAdd', async member => {
 
   let embed = new Discord.RichEmbed()
       .setAuthor('Новый участник', member.user.avatarURL)
-      .setDescription(`${hi}`)
+      .setDescription(`${member},` + `${hi}`)
       .setColor('#F7FE2E')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
@@ -126,13 +126,15 @@ await member.addRole(role.id);
 })
 
 bot.on('guildMemberRemove', async member => {
+  let gid = member.guild.id;
+  let hi = guildd[gid].actionch;
   let embed = new Discord.RichEmbed()
       .setAuthor('Пользователь вышел', member.user.avatarURL)
       .setDescription(`${member.user.username}#${member.user.discriminator} (${member})`)
       .setColor('#6A696A')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
-  let channel = member.guild.channels.find(c => c.name == guildd[gid].actionch)
+  let channel = member.guild.channels.find(c => c.name == hi)
   await channels.send(embed)
 }) 
 
