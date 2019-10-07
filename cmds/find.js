@@ -14,11 +14,12 @@ module.exports.run = async (bot, message, args) => {
     .setColor(RANDOM)
     .addField("Канал действий", one, true)
     .addField("Роль прибывшим", two, true)
-    .addField("Роль мут", tree, true)
+    .addField("Роль мут", tree, true);
+              
     bot.send(embed);
 
 }
  
 module.exports.help = {
-  name: "find"
+  name: "options"
 }
