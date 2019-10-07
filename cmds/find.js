@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const options = require("../guildsshop.js");
+const options = require("../guildsshop.json");
 
 module.exports.run = async (bot, message, args) => {
 
