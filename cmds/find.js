@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     let four = options[gid];
     
     let embed = new Discord.RichEmbed()
-    .setTitle(`Опции сервера. [ID: ${four}`
+    .setTitle(`Опции сервера. [ID: ${four}`)
     .setColor(RANDOM)
     .addField("Канал действий", one, true)
     .addField("Роль прибывшим", two, true)
