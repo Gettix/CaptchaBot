@@ -134,8 +134,8 @@ bot.on('guildMemberRemove', async member => {
       .setColor('#6A696A')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
-  let channel = member.guild.channels.find(c => c.name == hi)
-  await channels.send(embed)
+  let channell = member.guild.channels.find(c => c.name == hi)
+  await channell.send(embed)
 }) 
 
 var timer;
