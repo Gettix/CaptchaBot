@@ -118,7 +118,7 @@ bot.on('guildMemberAdd', async member => {
       .setColor('#F7FE2E')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
-await channels.send(embed);
+await channel.send(embed);
 await member.addRole(role.id);
 })
 
