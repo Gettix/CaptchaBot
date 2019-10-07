@@ -14,11 +14,17 @@ if ( args.length === 1 && args[ 0 ] === 'logs' ) {
     options[gid].actionch = inc;
 bot.send(`Успешно! Канал действий сменён на ${inc}`);
 };
-    if ( args.length === 1 && args[ 0 ] === 'memberrole') {
-        if(!inc) return bot.send("Укажите роль для новеньких");
+    if ( args.length === 1 && args[ 0 ] === 'logs' ) {
+    if(!inc) return bot.send("Укажите канал действий");
+        
+    options[gid].actionch = inc;
+bot.send(`Успешно! Канал действий сменён на ${inc}`);
+};
+    if ( args.length === 1 && args[ 0 ] === 'muterole') {
+        if(!inc) return bot.send("Укажите роль для плохишей");
 
  
-    options[gid].roleadd = inc;
+    options[gid].temprole = inc;
         bot.send(`Успешно!Роль добавлена`);
 };
 }
