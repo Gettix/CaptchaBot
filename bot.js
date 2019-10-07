@@ -107,6 +107,7 @@ bot.on('message', async message => {
 })*/
 
 bot.on('guildMemberAdd', async member => {
+  let gid = message.guild.id;
   let dodo = guildd[gid].roleadd;
   let odod = guildd[gid].actionch;
   let role = member.guild.roles.find(r => r.name == dodo);
