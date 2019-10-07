@@ -1,10 +1,14 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
+const helo = require("../guildsshop.json");
 module.exports.run = async (bot,message,args) => {
-    message.channel.send("Paka:3");
-    let enbed = new Discord.RichEmbed() 
+    let mess = args.join(" ");
+    let gid = message.guild.id;
+    if(!mess) return bot.send("Пожалуйста, напишите хотя бы ''привет'' новому участнику..");
+    helo[gid].hello = mess;
+    bot.send(`Приветствие изменено на ${mess}`);
 };
 
 module.exports.help = {
-    name: "hello"
+    name: "HiMessage"
 };
