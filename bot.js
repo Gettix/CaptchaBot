@@ -63,7 +63,8 @@ bot.on('message', async message => {
     cost:0,
     namerole: "none",
     actionch: "none",
-    roleadd: "none"
+    roleadd: "none",
+   temprole: "muted"
     };
   };
   
