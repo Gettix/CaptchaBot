@@ -110,7 +110,7 @@ bot.on('guildMemberAdd', async member => {
   let dodo = guildd[gid].roleadd;
   let odod = guildd[gid].actionch;
   let role = member.guild.roles.find(r => r.name == dodo);
-  let channel = member.guild.channels.find(c => c.name == odod);
+  let channell = member.guild.channels.find(c => c.name == odod);
 
   let embed = new Discord.RichEmbed()
       .setAuthor('Пользователь присоеденился', member.user.avatarURL)
@@ -118,7 +118,7 @@ bot.on('guildMemberAdd', async member => {
       .setColor('#F7FE2E')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
-await channel.send(embed);
+await channell.send(embed);
 await member.addRole(role.id);
 })
 
