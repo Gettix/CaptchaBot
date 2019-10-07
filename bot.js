@@ -64,7 +64,8 @@ bot.on('message', async message => {
     namerole: "none",
     actionch: "none",
     roleadd: "none",
-   temprole: "muted"
+   temprole: "muted",
+    hello: "Привет/hello"
     };
   };
   
@@ -108,14 +109,15 @@ bot.on('message', async message => {
 
 bot.on('guildMemberAdd', async member => {
   let gid = member.guild.id;
+  let hi = guildd[gid].hello;
   let dodo = guildd[gid].roleadd;
   let odod = guildd[gid].actionch;
   let role = member.guild.roles.find(r => r.name == dodo);
   let channell = member.guild.channels.find(c => c.name == odod);
 
   let embed = new Discord.RichEmbed()
-      .setAuthor('Пользователь присоеденился', member.user.avatarURL)
-      .setDescription(`${member.user.username}#${member.user.discriminator} (${member})`)
+      .setAuthor('Новый участник', member.user.avatarURL)
+      .setDescription(`${hi}`)
       .setColor('#F7FE2E')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
