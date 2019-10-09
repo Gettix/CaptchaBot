@@ -27,6 +27,7 @@ module.exports.run = async (bot,message,args) => {
     }catch(e){
       console.log(e.stack);
     };
+  };
   if ( args.length === 1 && args[ 0 ] === 'start' ) {
  // optional object arg with keys: height, width, text, font
 var password = generator.generate({
