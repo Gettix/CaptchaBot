@@ -32,6 +32,7 @@ captcha.buffer(type); // outputs an image stream. type can be either png or jpeg
       profile[lol].code == 0;
       bot.send("Вы неправильно ввели капчу!");
 }
+   };
 
 module.exports.help = {
     name: "captcha"
