@@ -17,17 +17,7 @@ module.exports.run = async (bot,message,args) => {
         name: wq,
         color: "#000000",
         permissions:[]
-      })
-      message.guild.channels.forEach(async (channel, id) => {
-        await channel.overwritePermissions(muterole, {
-          SEND_MESSAGES: false,
-          ADD_REACTIONS: false
-        });
       });
-    }catch(e){
-      console.log(e.stack);
-    };
-  };
   if ( args.length === 1 && args[ 0 ] === 'start' ) {
  // optional object arg with keys: height, width, text, font
 var password = generator.generate({
