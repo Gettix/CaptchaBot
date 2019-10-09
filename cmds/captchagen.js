@@ -31,6 +31,7 @@ captcha.buffer(type); // outputs an image stream. type can be either png or jpeg
       } else {
       profile[lol].code == 0;
       bot.send("Вы неправильно ввели капчу!");
+      };
 };
    };
 
