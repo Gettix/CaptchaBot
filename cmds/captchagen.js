@@ -19,7 +19,7 @@ var password = generator.generate({
  .setFooter(`Заранее спасибо ^^`)
  bot.send(pass);
     
-     profile[lol].code == password;
+     profile[lol].code = password;
  
   };
    if ( args.length === 1 && args[ 0 ] === 'enter' ) {
@@ -27,9 +27,9 @@ var password = generator.generate({
          bot.send("Капча пройдена! Контент разблокирован");
          let roless = g[gid].buyrole;
 	message.member.addRole(roless)
-         profile[lol].code == 0;
+         profile[lol].code = 0;
       } else {
-      profile[lol].code == 0;
+      profile[lol].code = 0;
       bot.send("Вы неправильно ввели капчу!");
       };
 };
