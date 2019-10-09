@@ -23,7 +23,7 @@ captcha.buffer(type); // outputs an image stream. type can be either png or jpeg
   profile[lol].code = captcha.text();
  
  bot.send(captcha);
-  }
+  };
    if ( args.length === 1 && args[ 0 ] === 'enter' ) {
       if(profile[lol].code === gol) {
          bot.send("Капча пройдена! Контент разблокирован");
@@ -31,7 +31,7 @@ captcha.buffer(type); // outputs an image stream. type can be either png or jpeg
       } else {
       profile[lol].code == 0;
       bot.send("Вы неправильно ввели капчу!");
-}
+};
    };
 
 module.exports.help = {
