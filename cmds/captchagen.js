@@ -1,14 +1,24 @@
 const Discord = module.require("discord.js");
 const profile = require("../profile.json");
+var generator = require('generate-password');
 
 module.exports.run = async (bot,message,args) => {
    let lol = message.author.id;
    let gol = args.pop();
   if ( args.length === 1 && args[ 0 ] === 'start' ) {
  // optional object arg with keys: height, width, text, font
-
+var password = generator.generate({
+    length: 6,
+    numbers: true
+});
+ let pass = new Discord.RichEmbed()
+ .setTitle("Капча")
+ .addField(`Введи =captcha enter ${password}`)
+ .setFooter(`Заранее спасибо ^^`)
+ bot.send(pass);
+    
+     profile[lol].code == password;
  
- bot.send(enbed);
   };
    if ( args.length === 1 && args[ 0 ] === 'enter' ) {
       if(profile[lol].code === gol) {
