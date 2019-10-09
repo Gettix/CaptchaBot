@@ -21,8 +21,11 @@ captcha.buffer(cb);   // outputs png buffer. works sync and async (cb is optiona
 captcha.buffer(type); // outputs an image stream. type can be either png or jpeg (png is the default)
  
   profile[lol].code = captcha.text();
+let enbed = new Discord.RichEmbed()
+.setTitle("Капча")
+.setImage(captcha);
  
- bot.send(captcha);
+ bot.send(enbed);
   };
    if ( args.length === 1 && args[ 0 ] === 'enter' ) {
       if(profile[lol].code === gol) {
