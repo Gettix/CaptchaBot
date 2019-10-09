@@ -41,14 +41,7 @@ bot.on('message', async message => {
   }
   if(!profile[uid]) {
     profile[uid] ={
-      coins: 10,
-      warns:0,
-      xp:0,
-      lvl:0,
-      vip:false,
-      status: "none set",
-      card:0,
-      copy: "none"
+      code: 959594545224
     };
   };
     if(!pokemon[uid]) {
