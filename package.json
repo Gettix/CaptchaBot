@@ -8,7 +8,7 @@
     "opusscript": "0.0.7",
     "superagent": "5.0.2",
     "ms": "2.1.2",
-    "captcha-solver": "0.0.6"
+    "captchagen": "1.2.0"
   },
   "devDependencies": {},
   "scripts": {
