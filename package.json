@@ -7,11 +7,7 @@
     "discord.js": "^11.5.1",
     "opusscript": "0.0.7",
     "superagent": "5.0.2",
-    "pokemon": "2.0.0",
-    "pokemon-gif": "1.0.14",
-    "ms": "2.1.2",
-    "generate-password": "1.4.2",
-    "gmail-send": "1.8.10"
+    "ms": "2.1.2"
   },
   "devDependencies": {},
   "scripts": {
