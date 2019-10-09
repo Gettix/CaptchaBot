@@ -3,16 +3,16 @@ const fs = require("fs");
 let p = require("../profile.json");
 
 module.exports.run = async (bot,message,args) => {
-    let au = message.author.id
-    let Owner = p[au]
-    if(Owner.vip !== true) return message.reply("Только вип-пользователи могут использовать эту команду!")
+
+
+
     
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     message.delete().catch();
-    message.channel.send(`${message.author} 💙💙VIP💙💙 AND 🔮🔮Brilliant🔮🔮`);
+    message.channel.send("Link for vote: ***https://top.gg/bot/551625781818818590/vote***");
     let enbed = new Discord.RichEmbed() 
 };
 
 module.exports.help = {
-    name: "imviip"
+    name: "vote"
 };
