@@ -110,7 +110,7 @@ bot.on('guildMemberAdd', async member => {
 
   let embed = new Discord.RichEmbed()
       .setAuthor('Новый участник', member.user.avatarURL)
-      .setDescription(`${member},` + `${hi}`)
+      .setDescription(`${member},` + `Чтобы разблокировать контент введите =captcha start`)
       .setColor('#F7FE2E')
       .setFooter(`ID: ${member.id}`)
       .setTimestamp()
