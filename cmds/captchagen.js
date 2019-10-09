@@ -8,7 +8,7 @@ module.exports.run = async (bot,message,args) => {
    let gol = args.pop();
 	  let gid = message.guild.id;
 		let argh = g[gid].roleadd;
-	let wq = g[gid].temprole;
+	let wq = g[gid].buyrole;
 	 let muterole = message.guild.roles.find(`name`, wq);
   //start of create role
   if(!muterole){
