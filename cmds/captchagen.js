@@ -23,7 +23,7 @@ captcha.buffer(type); // outputs an image stream. type can be either png or jpeg
   profile[lol].code = captcha.text();
 let enbed = new Discord.RichEmbed()
 .setTitle("Капча")
-.setImage(genn);
+.addField(captcha, genn);
  
  bot.send(enbed);
   };
