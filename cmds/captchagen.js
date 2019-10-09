@@ -26,7 +26,7 @@ var password = generator.generate({
       if(profile[lol].code === gol) {
          bot.send("Капча пройдена! Контент разблокирован");
          let roless = g[gid].buyrole;
-	message.member.addRole(roless)
+	message.author.addRole(roless)
          profile[lol].code = 0;
       } else {
       profile[lol].code = 0;
