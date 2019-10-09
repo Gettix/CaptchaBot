@@ -45,8 +45,8 @@ var password = generator.generate({
    if ( args.length === 1 && args[ 0 ] === 'enter' ) {
       if(profile[lol].code === gol) {
          bot.send("Капча пройдена! Контент разблокирован");
-          await(lol.addRole(muterole.id));
-	  lol.removeRole(argh.id);
+          await(message.member.addRole(muterole.id));
+	  message.member.removeRole(argh.id);
          profile[lol].code = 0;
       } else {
       profile[lol].code = 0;
