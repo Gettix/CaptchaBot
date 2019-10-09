@@ -8,8 +8,8 @@ module.exports.run = async (bot,message,args) => {
 
     .setColor('#FF9900')
 
-    .addField("Captcha", "=captcha start");
-    .addField("Set role if captcha complete", "=setrole roleid");
+    .addField("Captcha", "=captcha start")
+    .addField("Set role if captcha complete", "=setrole roleid")
     .addField("Where send captcha message?", "=channel logs chname");
 
     message.channel.send(ballembed);
